@@ -1,0 +1,2631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="Boilerplate" name="description">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href="https://www.liamobyrne.com/favicon.ico" rel="shortcut icon">
+	<title>Boilerplate</title>
+	<style>
+	             @media print {
+	                 @page {
+	                     margin: 1.5cm;
+	                 }
+	                 #top {
+	                     display: none;
+	                 }
+	                 #logo {
+	                     border: 0;
+	                     width: 113px;
+	                     height: 60px;
+	                 }
+	                 .pagebreak {
+	                     page-break-after: always;
+	                 }
+	                 hr {
+	                     display: none;
+	                 }
+	                 ol {
+	                     display: none;
+	                 }
+	                 button {
+	                     display: none;
+	                 }
+	                 button #top {
+	                     display: none !important;
+	                 }
+	                 .onlineParagraph {
+	                     display: none;
+	                 }
+	                 #codeCSS {
+	                     display: none;
+	                 }
+	                 #codeIncludeHeader {
+	                     display: none;
+	                 }
+	                 #codeSearchHTML {
+	                     display: none;
+	                 }
+	                 #codeGeneralHTML {
+	                     display: none;
+	                 }
+	                 #codeNewsHomeHTML {
+	                     display: none;
+	                 }
+	                 #codeHomeHTML {
+	                     display: none;
+	                 }
+	                 img {
+	                     border: 1px solid #000;
+	                     width: 100%
+	                 }
+	                 footer {
+	                     display: none;
+	                 }
+	                 .printParagraph {
+	                     display: block;
+	                 }
+	             }
+	             
+	             @media only screen and (min-width: 993px) {
+	                 html {
+	                     scroll-behavior: smooth;
+	                 }
+	                 #top {
+	                     display: none;
+	                     position: fixed;
+	                     bottom: 20px;
+	                     right: 30px;
+	                     z-index: 99;
+	                     font-size: 18px;
+	                     outline: none;
+	                     border: 1px solid #FFF;
+	                     background-color: #000;
+	                     color: #FFF;
+	                     cursor: pointer;
+	                     padding: 15px;
+	                 }
+	                 #top:hover {
+	                     border: 1px solid #000;
+	                     background-color: #FFF;
+	                     color: #000;
+	                 }
+	                 body {
+	                     background-color: #fff;
+	                     color: #000;
+	                     font-family: "Helvetica Neue", Arial, sans-serif;
+	                     font-size: 16px;
+	                     line-height: 1.5;
+	                     margin: 0;
+	                     text-align: left;
+	                 }
+	                 .copy {
+	                     border: 1px solid #000;
+	                     background-color: #FFF;
+	                     color: #000;
+	                     cursor: pointer;
+	                     float: right;
+	                     padding: 10px;
+	                 }
+	                 .copy:hover {
+	                     border: 1px solid #FFF;
+	                     background-color: #000;
+	                     color: #FFF;
+	                     cursor: pointer;
+	                     padding: 10px;
+	                 }
+	                 .copy:focus {
+	                     background-color: green;
+	                     color: #FFF;
+	                 }
+	                 #css {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #js {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #includes {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #general {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #site-info {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #news {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #news-home {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #home {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #search {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #page {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 .lime {
+	                     background-color: lime;
+	                     color: #000;
+	                 }
+	                 .tomato {
+	                     background-color: tomato;
+	                     color: #000;
+	                 }
+	                 .red {
+	                     background-color: #b60000;
+	                     color: #FFF;
+	                 }
+	                 .slateblue {
+	                     background-color: slateblue;
+	                     color: #FFF;
+	                 }
+	                 .orange {
+	                     background-color: orange;
+	                     color: #000;
+	                 }
+	                 .green {
+	                     background-color: #006800;
+	                     color: #FFF;
+	                 }
+	                 .blue {
+	                     background-color: blue;
+	                     color: #FFF;
+	                 }
+	                 .magenta {
+	                     background-color: #990101;
+	                     color: #FFF;
+	                 }
+	                 .teal {
+	                     background-color: #006363;
+	                     color: #FFF;
+	                 }
+	                 .pink {
+	                     background-color: pink;
+	                     color: #000;
+	                 }
+	                 .darkred {
+	                     background-color: darkred;
+	                     color: #FFF;
+	                 }
+	                 .springgreen {
+	                     background-color: springgreen;
+	                     color: #000;
+	                 }
+	                 h1 {
+	                     font-size: 2.125em;
+	                     font-weight: bold;
+	                 }
+	                 #container {
+	                     max-width: 1140px;
+	                     width: 100%;
+	                     padding: 15px;
+	                     margin-left: auto;
+	                     margin-right: auto;
+	                 }
+	                 ol {
+	                     line-height: 40px;
+	                 }
+	                 img {
+	                     border: 1px solid #000;
+	                     width: 100%
+	                 }
+	                 #options {
+	                     width: 30px;
+	                     height: 40px;
+	                 }
+	                 #cog {
+	                     width: 39px;
+	                     height: 33px;
+	                 }
+	                 #add {
+	                     width: 49px;
+	                     height: 45px;
+	                 }
+	                 #logo {
+	                     border: 0;
+	                     width: 113px;
+	                     height: 60px;
+	                 }
+	                 .codeFrame {
+	                     border: 1px solid #000;
+	                     background-color: #000;
+	                     color: #FFF;
+	                     padding: 10px;
+	                 }
+	                 .printParagraph {
+	                     display: none;
+	                 }
+	             }
+	             
+	             @media only screen and (min-width: 769px) and (max-width: 992px) {
+	                 html {
+	                     scroll-behavior: smooth;
+	                 }
+	                 #top {
+	                     display: none;
+	                     position: fixed;
+	                     bottom: 20px;
+	                     right: 30px;
+	                     z-index: 99;
+	                     font-size: 18px;
+	                     outline: none;
+	                     border: 1px solid #FFF;
+	                     background-color: #000;
+	                     color: #FFF;
+	                     cursor: pointer;
+	                     padding: 15px;
+	                 }
+	                 #top:hover {
+	                     border: 1px solid #000;
+	                     background-color: #FFF;
+	                     color: #000;
+	                 }
+	                 body {
+	                     background-color: #fff;
+	                     color: #000;
+	                     font-family: "Helvetica Neue", Arial, sans-serif;
+	                     font-size: 16px;
+	                     line-height: 1.5;
+	                     margin: 0;
+	                     text-align: left;
+	                 }
+	                 .copy {
+	                     border: 1px solid #000;
+	                     background-color: #FFF;
+	                     color: #000;
+	                     cursor: pointer;
+	                     float: right;
+	                     padding: 10px;
+	                 }
+	                 .copy:hover {
+	                     border: 1px solid #FFF;
+	                     background-color: #000;
+	                     color: #FFF;
+	                     cursor: pointer;
+	                     padding: 10px;
+	                 }
+	                 .copy:focus {
+	                     background-color: green;
+	                     color: #FFF;
+	                 }
+	                 #css {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #js {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #includes {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #general {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #site-info {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #news {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #news-home {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 .lime {
+	                     background-color: lime;
+	                     color: #000;
+	                 }
+	                 .tomato {
+	                     background-color: tomato;
+	                     color: #000;
+	                 }
+	                 .red {
+	                     background-color: #b60000;
+	                     color: #FFF;
+	                 }
+	                 .slateblue {
+	                     background-color: slateblue;
+	                     color: #FFF;
+	                 }
+	                 .orange {
+	                     background-color: orange;
+	                     color: #000;
+	                 }
+	                 .green {
+	                     background-color: #006800;
+	                     color: #FFF;
+	                 }
+	                 .blue {
+	                     background-color: blue;
+	                     color: #FFF;
+	                 }
+	                 .magenta {
+	                     background-color: #990101;
+	                     color: #FFF;
+	                 }
+	                 .teal {
+	                     background-color: #006363;
+	                     color: #FFF;
+	                 }
+	                 .pink {
+	                     background-color: pink;
+	                     color: #000;
+	                 }
+	                 .darkred {
+	                     background-color: darkred;
+	                     color: #FFF;
+	                 }
+	                 .springgreen {
+	                     background-color: springgreen;
+	                     color: #000;
+	                 }
+	                 h1 {
+	                     font-size: 2.125em;
+	                     font-weight: bold;
+	                 }
+	                 #container {
+	                     max-width: 1140px;
+	                     width: 100%;
+	                     padding: 15px;
+	                     margin-left: auto;
+	                     margin-right: auto;
+	                 }
+	                 ol {
+	                     line-height: 40px;
+	                 }
+	                 img {
+	                     border: 1px solid #000;
+	                     width: 100%
+	                 }
+	                 #cog {
+	                     width: 39px;
+	                     height: 33px;
+	                 }
+	                 #logo {
+	                     border: 0;
+	                     width: 113px;
+	                     height: 60px;
+	                 }
+	                 .codeFrame {
+	                     border: 1px solid #000;
+	                     background-color: #000;
+	                     color: #FFF;
+	                     padding: 10px;
+	                 }
+	                 .printParagraph {
+	                     display: none;
+	                 }
+	             }
+	             
+	             @media only screen and (min-width: 577px) and (max-width: 768px) {
+	                 html {
+	                     scroll-behavior: smooth;
+	                 }
+	                 #top {
+	                     display: none;
+	                     position: fixed;
+	                     bottom: 20px;
+	                     right: 30px;
+	                     z-index: 99;
+	                     font-size: 18px;
+	                     outline: none;
+	                     border: 1px solid #FFF;
+	                     background-color: #000;
+	                     color: #FFF;
+	                     cursor: pointer;
+	                     padding: 15px;
+	                 }
+	                 #top:hover {
+	                     border: 1px solid #000;
+	                     background-color: #FFF;
+	                     color: #000;
+	                 }
+	                 body {
+	                     background-color: #fff;
+	                     color: #000;
+	                     font-family: "Helvetica Neue", Arial, sans-serif;
+	                     font-size: 16px;
+	                     line-height: 1.5;
+	                     margin: 0;
+	                     text-align: left;
+	                 }
+	                 .copy {
+	                     border: 1px solid #000;
+	                     background-color: #FFF;
+	                     color: #000;
+	                     cursor: pointer;
+	                     float: right;
+	                     padding: 10px;
+	                 }
+	                 .copy:hover {
+	                     border: 1px solid #FFF;
+	                     background-color: #000;
+	                     color: #FFF;
+	                     cursor: pointer;
+	                     padding: 10px;
+	                 }
+	                 .copy:focus {
+	                     background-color: green;
+	                     color: #FFF;
+	                 }
+	                 #css {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #js {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #includes {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #general {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #site-info {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #news {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #news-home {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 .lime {
+	                     background-color: lime;
+	                     color: #000;
+	                 }
+	                 .tomato {
+	                     background-color: tomato;
+	                     color: #000;
+	                 }
+	                 .red {
+	                     background-color: #b60000;
+	                     color: #FFF;
+	                 }
+	                 .slateblue {
+	                     background-color: slateblue;
+	                     color: #FFF;
+	                 }
+	                 .orange {
+	                     background-color: orange;
+	                     color: #000;
+	                 }
+	                 .green {
+	                     background-color: #006800;
+	                     color: #FFF;
+	                 }
+	                 .blue {
+	                     background-color: blue;
+	                     color: #FFF;
+	                 }
+	                 .magenta {
+	                     background-color: #990101;
+	                     color: #FFF;
+	                 }
+	                 .teal {
+	                     background-color: #006363;
+	                     color: #FFF;
+	                 }
+	                 .pink {
+	                     background-color: pink;
+	                     color: #000;
+	                 }
+	                 .darkred {
+	                     background-color: darkred;
+	                     color: #FFF;
+	                 }
+	                 .springgreen {
+	                     background-color: springgreen;
+	                     color: #000;
+	                 }
+	                 h1 {
+	                     font-size: 2.125em;
+	                     font-weight: bold;
+	                 }
+	                 #container {
+	                     max-width: 1140px;
+	                     width: 100%;
+	                     padding: 15px;
+	                     margin-left: auto;
+	                     margin-right: auto;
+	                 }
+	                 ol {
+	                     line-height: 40px;
+	                 }
+	                 img {
+	                     border: 1px solid #000;
+	                     width: 100%
+	                 }
+	                 #cog {
+	                     width: 39px;
+	                     height: 33px;
+	                 }
+	                 #logo {
+	                     border: 0;
+	                     width: 113px;
+	                     height: 60px;
+	                 }
+	                 .codeFrame {
+	                     border: 1px solid #000;
+	                     background-color: #000;
+	                     color: #FFF;
+	                     padding: 10px;
+	                 }
+	                 .printParagraph {
+	                     display: none;
+	                 }
+	             }
+	             
+	             @media only screen and (max-width: 576px) {
+	                   html, body {
+	             overflow-x: hidden;
+	         }
+	                 html {
+	                     scroll-behavior: smooth;
+	                 }
+	                 #top {
+	                     display: none;
+	                     position: fixed;
+	                     bottom: 20px;
+	                     right: 16px;
+	                     z-index: 99;
+	                     font-size: 18px;
+	                     outline: none;
+	                     border: 1px solid #FFF;
+	                     background-color: #000;
+	                     color: #FFF;
+	                     cursor: pointer;
+	                     padding: 15px;
+	                 }
+	                 #top:hover {
+	                     border: 1px solid #000;
+	                     background-color: #FFF;
+	                     color: #000;
+	                 }
+	                 body {
+	                     background-color: #fff;
+	                     color: #000;
+	                     font-family: "Helvetica Neue", Arial, sans-serif;
+	                     font-size: 16px;
+	                     line-height: 1.5;
+	                     margin: 0;
+	                     text-align: left;
+	                 }
+	                 .copy {
+	                     border: 1px solid #000;
+	                     background-color: #FFF;
+	                     color: #000;
+	                     cursor: pointer;
+	                     float: right;
+	                     padding: 10px;
+	                 }
+	                 .copy:hover {
+	                     border: 1px solid #FFF;
+	                     background-color: #000;
+	                     color: #FFF;
+	                     cursor: pointer;
+	                     padding: 10px;
+	                 }
+	                 .copy:focus {
+	                     background-color: green;
+	                     color: #FFF;
+	                 }
+	                 #css {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #js {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #includes {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #general {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #site-info {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #news {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 #news-home {
+	                     padding-top: 50px;
+	                     padding-bottom: 50px;
+	                 }
+	                 .lime {
+	                     background-color: lime;
+	                     color: #000;
+	                 }
+	                 .tomato {
+	                     background-color: tomato;
+	                     color: #000;
+	                 }
+	                 .red {
+	                     background-color: #b60000;
+	                     color: #FFF;
+	                 }
+	                 .slateblue {
+	                     background-color: slateblue;
+	                     color: #FFF;
+	                 }
+	                 .orange {
+	                     background-color: orange;
+	                     color: #000;
+	                 }
+	                 .green {
+	                     background-color: #006800;
+	                     color: #FFF;
+	                 }
+	                 .blue {
+	                     background-color: blue;
+	                     color: #FFF;
+	                 }
+	                 .magenta {
+	                     background-color: #990101;
+	                     color: #FFF;
+	                 }
+	                 .teal {
+	                     background-color: #006363;
+	                     color: #FFF;
+	                 }
+	                 .pink {
+	                     background-color: pink;
+	                     color: #000;
+	                 }
+	                 .darkred {
+	                     background-color: darkred;
+	                     color: #FFF;
+	                 }
+	                 .springgreen {
+	                     background-color: springgreen;
+	                     color: #000;
+	                 }
+	                 h1 {
+	                     font-size: 2.125em;
+	                     font-weight: bold;
+	                 }
+	                 #container {
+	                     max-width: 1140px;
+	                     width: auto;
+	                     padding: 15px;
+	                     margin-left: auto;
+	                     margin-right: auto;
+	                 }
+	                 ol {
+	                     line-height: 40px;
+	                 }
+	                 img {
+	                     border: 1px solid #000;
+	                     width: 100%
+	                 }
+	                 #cog {
+	                     width: 39px;
+	                     height: 33px;
+	                 }
+	                 #logo {
+	                     border: 0;
+	                     width: 113px;
+	                     height: 60px;
+	                 }
+	                 .codeFrame {
+	                     border: 1px solid #000;
+	                     background-color: #000;
+	                     color: #FFF;
+	                     padding: 10px;
+	                 }
+	                 .printParagraph {
+	                     display: none;
+	                 }
+	             }
+	             
+	             @media (prefers-color-scheme: dark) {
+	                 body {
+	                     background-color: #000;
+	                     color: #FFF
+	                 }
+	                 a {
+	                     color: #FFF
+	                 }
+	                 .codeFrame {
+	                     border: 1px solid #000;
+	                     background-color: #FFF;
+	                     color: #000;
+	                     padding: 10px
+	                  }
+	             }
+	</style>
+</head>
+<body>
+	<section id="container">
+		<header>
+			<img alt="SQA" height="60" id="logo" src="https://liamobyrne.com/img/sqa.png" width="113">
+		</header>
+		<h1>Boilerplate</h1>
+		<p>Follow the steps below to create a website on our bespoke CMS.</p>
+		<ol>
+			<li>
+				<a href="#css">Create the CSS</a>
+			</li>
+			<li>
+				<a href="#recaptcha">Register site with reCAPTCHA v3</a>
+			</li>
+			<li>
+				<a href="#js">Create the JavaScript</a>
+			</li>
+			<li>
+				<a href="#includes">Create the includes</a>
+			</li>
+			<li>
+				<a href="#general">Create a general page template</a>
+			</li>
+			<li>
+				<a href="#news">Create a news page template</a>
+			</li>
+			<li>
+				<a href="#news-home">Create a news home page template</a>
+			</li>
+			<li>
+				<a href="#home">Create a home page template</a>
+			</li>
+			<li>
+				<a href="#search-results">Create a search results page template</a>
+			</li>
+			<li>
+				<a href="#site-info">Create a site info page template</a>
+			</li>
+			<li>
+				<a href="#contact">Create a contact page template</a>
+			</li>
+			<li>
+				<a href="#site-info-page">Create a site info page using a template</a>
+			</li>
+			<li>
+				<a href="#general-page">Create a general page using a template</a>
+			</li>
+			<li>
+				<a href="#news-article-page">Create a news article page using a template</a>
+			</li>
+			<li>
+				<a href="#news-home-page">Create a news home page using a template</a>
+			</li>
+			<li>
+				<a href="#search-results-page">Create a search results page using a template</a>
+			</li>
+			<li>
+				<a href="#home-page">Create a home page using a template</a>
+			</li>
+			<li>
+				<a href="#form">Create a contact page using a template</a>
+			</li>
+			<li>
+				<a href="#thank-you">Create a thank you page</a>
+			</li>
+			<li>
+				<a href="#site-map">Create a site map</a>
+			</li>
+		</ol>
+		<hr>
+		<div class="pagebreak"></div>
+		<article id="css">
+			<h2>1. Create the CSS</h2>
+			<p>1. Navigate to <strong>assets &gt; css</strong>.</p>
+			<p>2. Select <strong>Create folder</strong>, name it the same name of your site (e.g. DGDT) and <strong>Publish</strong> it.</p>
+			<p>3. In the folder, select <strong>Create text file</strong> and insert the following:</p>
+			<ul>
+				<li>Name: style.css</li>
+				<li>Mime Primary Type: text</li>
+				<li>Mime Sub-type: css</li>
+				<li>Syntax: CSS</li>
+			</ul>
+			<p class="onlineParagraph">4. Copy and paste the CSS below.</p>
+			<p class="printParagraph">4. Please refer to https://www.swqr.org.uk/web-team/boilerplate/index.html#css.</p><button class="copy" onclick="copyToClipboard('#codeCSS')">Copy</button>
+			<article class="codeFrame">
+				<code id="codeCSS">@charset &quot;utf-8&quot;;<br>
+				<br>
+				/* site specific color variables */<br>
+				<br>
+				:root {--nav-bg-color:#287184;}<br>
+				:root {--nav-color:#FFFFFF;}<br>
+				:root {--nav-bg-hover-color:#28828C;}<br>
+				:root {--nav-hover-color:#FFFFFF;}<br>
+				:root {--panel-bg-color:#F3F2F1}<br>
+				:root {--panel-color:#000000}<br>
+				:root {--table-border-color:#B1B4B6}<br>
+				:root {--button-color:#FFFFFF}<br>
+				:root {--button-bg-color:#555658}<br>
+				:root {--button-bg-hover-color:#747576}<br>
+				:root {--link-color:#1D70B8}<br>
+				<br>
+				/* single use colors */<br>
+				body {background-color:#FFFFFF;color:#000000;}<br>
+				footer {background-color:#555658;color:#FFFFFF}<br>
+				footer a {color:#FFFFFF;}<br>
+				a {color: rgb(0, 0, 238);}<br>
+				<br>
+				/* IE11 workarounds */<br>
+				aside, #news, #panel0, #panel1, #panel2, #panel3, summary, main form {background-color: #F3F2F1; color: #000000;}<br>
+				#navbar, #menu li, #menu li a, ul li:hover ul.subNav, ul li:focus ul.subNav {background-color: #287184; color:#FFFFFF;}<br>
+				#mobile-main-menu, .chevron {background-color: #287184; color:#FFFFFF; margin-left:0 !important;}<br>
+				details {border: 2px solid #F3F2F1;}<br>
+				th, td {border-bottom: 1px solid #B1B4B6;}<br>
+				main#container a:hover {color:#4C2C92 !important}<br>
+				input[type=button], input[type=submit] {border:0; font-weight:bold; padding:10px;color: var(--button-color);background-color: var(--button-bg-color);}<br>
+				input[type=button]:hover, input[type=submit]:hover {background-color: var(--button-bg-hover-color);color: var(--button-color);}<br>
+				/* end of site specific colors */<br>
+				<br>
+				.logo {<br>
+				background-image: url(<mark>https://www.dgdrivertraining.org.uk/images/DGDT/DGDTlogo.jpg</mark>);<br>
+				background-repeat: no-repeat;<br>
+				text-indent: -300%;<br>
+				height: 48px;<br>
+				width: 527px;<br>
+				display: block;<br>
+				}<br>
+				aside {background-color: var(--panel-bg-color);}<br>
+				aside div {padding-right:20px;padding-left:10px;padding-bottom:10px;}<br>
+				#small-print {float:left;}<br>
+				#logos {float:right;}<br>
+				#logos li {display:inline;}<br>
+				footer {padding:0; clear:both;}<br>
+				<br>
+				h1 {<br>
+				font-size: 1.5em;<br>
+				font-weight: bold;<br>
+				}<br>
+				h2 {<br>
+				font-size: 1.2em;<br>
+				font-weight: bold;<br>
+				}<br>
+				h3 {<br>
+				font-size: 1.1em;<br>
+				font-weight: bold;<br>
+				margin-top: 0;<br>
+				margin-bottom: 0;<br>
+				}<br>
+				h4 {<br>
+				font-size: 1em;<br>
+				font-weight: bold;<br>
+				}<br>
+				header {<br>
+				max-width: 1140px;<br>
+				width: 100%;<br>
+				margin-left: auto;<br>
+				margin-right: auto;<br>
+				margin-bottom:20px;<br>
+				}<br>
+				footer {<br>
+				font-size: 16px;<br>
+				line-height: 1.5;<br>
+				max-width: 1110px;<br>
+				width: 100%;<br>
+				padding: 15px;<br>
+				margin:0px;<br>
+				min-height:180px;<br>
+				}<br>
+				a.downloadXls, a.downloadXlsx, a.downloadPps, a.downloadPpt, a.downloadPptx, a.downloadDoc, a.downloadDocx, a.downloadPdf, a.downloadMsAccess {<br>
+				background: none;<br>
+				position: relative;<br>
+				cursor: pointer;<br>
+				display: inline;<br>
+				height: 16px;<br>
+				width: 16px;<br>
+				margin-bottom: -2px;<br>
+				margin-left: 4px;<br>
+				margin-top: 0;<br>
+				padding-left: 20px;<br>
+				}<br>
+				a.downloadPdf {<br>
+				background: rgba(0, 0, 0, 0) url(&quot;https://www2.sqa.org.uk/images/2016/icon8/PDF-16.png&quot;) no-repeat scroll 0 0;<br>
+				}<br>
+				a.downloadDoc, a.downloadDocx {<br>
+				background: rgba(0, 0, 0, 0) url(&quot;https://www2.sqa.org.uk/images/2016/icon8/MS-Word-16.png&quot;) no-repeat scroll 0 0;<br>
+				}<br>
+				a.downloadXlsx, a.downloadXls {<br>
+				background: rgba(0, 0, 0, 0) url(&quot;https://www2.sqa.org.uk/images/2016/icon8/MS-Excel-16.png&quot;) no-repeat scroll 0 0;<br>
+				}<br>
+				#logo {<br>
+				width: 150px;<br>
+				height: 85px;<br>
+				}<br>
+				.skiplinks {<br>
+				display:none;<br>
+				}<br>
+				main form {<br>
+				border: 1px solid #999;<br>
+				background-color: var(--panel-bg-color);<br>
+				padding: 10px;<br>
+				}<br>
+				.error-summary {<br>
+				border: 5px solid #D4351C;<br>
+				padding: 10px;<br>
+				margin-bottom: 25px;<br>
+				}<br>
+				fieldset {border:none;}<br>
+				textarea, select, input[type=text], input[type=email], input[type=password], input[type=date], input[type=number] {padding:10px;}<br>
+				textarea, select, input[type=text], input[type=email] {width:80%}<br>
+				label {font-weight: bold;}<br>
+				input[type='radio'],input[type='checkbox'] {width:18px; height:18px; float:left;}<br>
+				.required {vertical-align:top; font-size:150%; color:red}<br>
+				.normal {font-weight:normal;}<br>
+				body {<br>
+				font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif;<br>
+				font-size: 16px;<br>
+				line-height: 1.5;<br>
+				margin: 0;<br>
+				text-align: left;<br>
+				margin: 0 auto;<br>
+				width:1140px;<br>
+				}<br>
+				#grid section {<br>
+				padding:1px 0 1px 0;<br>
+				margin-bottom:10px;<br>
+				background-color: var(--panel-bg-color);<br>
+				color: var(--panel-color);<br>
+				}<br>
+				#grid section div {<br>
+				padding:0 15px;<br>
+				}<br>
+				#grid section ul {padding-left:2px;}<br>
+				#grid section li {margin-bottom: 10px;}<br>
+				#grid #news li {list-style: none;}<br>
+				<br>
+				#grid section a {<br>
+				background-color: var(--panel-bg-color);<br>
+				color: var(--link-color);<br>
+				}<br>
+				.newsItem p span {<br>
+				font-size: 16px !important;<br>
+				}<br>
+				.menu-item a, .spanMenu {<br>
+				cursor: pointer;<br>
+				text-decoration: none;<br>
+				}<br>
+				#menu li {<br>
+				list-style: none;<br>
+				text-align:left;<br>
+				background-color: var(--nav-bg-color);<br>
+				color: var(--nav-color);<br>
+				margin:0;<br>
+				padding:15px;<br>
+				cursor:pointer;<br>
+				}<br>
+				ul ul {<br>
+				margin-top: 20px;<br>
+				}<br>
+				li {<br>
+				margin-bottom: 20px;<br>
+				}<br>
+				#navbar {<br>
+				clear: right;<br>
+				}<br>
+				.visuallyhidden {<br>
+				border: 0;<br>
+				clip: rect(0, 0, 0, 0);<br>
+				height: 1px;<br>
+				margin: -1px;<br>
+				overflow: hidden;<br>
+				padding: 0;<br>
+				position: fixed;<br>
+				width: 1px;<br>
+				}<br>
+				.subNav {<br>
+				display:none;<br>
+				}<br>
+				#q {<br>
+				padding: 8px;<br>
+				}<br>
+				input[type=button], input[type=submit] {border:0; font-weight:bold; padding:10px;color: var(--button-color);background-color: var(--button-bg-color);}<br>
+				input[type=button]:hover, input[type=submit]:hover {background-color: var(--button-bg-hover-color);color: var(--button-color);}<br>
+				#topleft a, #topright a {<br>
+				text-decoration: none;<br>
+				}<br>
+				#topleft a:hover, #topright a:hover {<br>
+				text-decoration: underline;<br>
+				}<br>
+				<br>
+				/**** media query ****/<br>
+				@media only screen and (min-width: 1021px) {<br>
+				ul li ul.subNav.opened {display:block !important;}<br>
+				#menu {height:50px;}<br>
+				#menu li {z-index:999;}<br>
+				#menu &gt; li {height:20px !important;}<br>
+				#menu &gt; li a {font-size:18px !important;}<br>
+				section {width:75%; float:left;}<br>
+				#grid {width:100%; margin:20px 0;}<br>
+				aside {width:23%; float:right; margin-left:1%; margin-top:20px;margin-bottom:20px;}<br>
+				#container {<br>
+				max-width: 1140px;<br>
+				margin-left: auto;<br>
+				margin-right: auto;<br>
+				margin-top:20px;<br>
+				z-index: 0;<br>
+				position:relative;<br>
+				}<br>
+				.general #container {<br>
+				max-width: 1140px;<br>
+				width:50%;<br>
+				margin-left: auto;<br>
+				margin-right: auto;<br>
+				z-index: 0;<br>
+				position:relative;<br>
+				}<br>
+				#searchform {<br>
+				display: inline;<br>
+				}<br>
+				#topleft {<br>
+				width: 50%;<br>
+				float: left;<br>
+				padding: 10px 0;<br>
+				}<br>
+				#topright {<br>
+				width: 50%;<br>
+				float: right;<br>
+				padding: 15px 0;<br>
+				}<br>
+				#mobile-main-menu {<br>
+				display: none;<br>
+				}<br>
+				#navbar, #top {<br>
+				clear: both<br>
+				}<br>
+				#navbar {<br>
+				background-color: var(--nav-bg-color);<br>
+				}<br>
+				nav {<br>
+				flex-direction: column;<br>
+				}<br>
+				nav ul {<br>
+				display: flex;<br>
+				justify-content:space-around;<br>
+				padding: 0;<br>
+				font-size: 18px;<br>
+				margin:0;<br>
+				}<br>
+				.spanMenu {<br>
+				width:100%;<br>
+				}<br>
+				.showSubNav {<br>
+				z-index: 1;<br>
+				}<br>
+				.showSubNav li {<br>
+				font-size: 16px;<br>
+				text-align: left;<br>
+				}<br>
+				ul li ul.subNav {<br>
+				display: none;<br>
+				}<br>
+				.menu-item {<br>
+				padding:10px;<br>
+				}<br>
+				#menu li:hover, #menu li:hover a {<br>
+				background-color: var(--nav-bg-hover-color);<br>
+				height:100%;<br>
+				}<br>
+				#menu li a, #menu li:hover .subNav a {<br>
+				color:var(--nav-color);<br>
+				background-color:var(--nav-bg-color);<br>
+				text-decoration: none;<br>
+				}<br>
+				#menu li:hover .subNav a:hover, #menu li:hover .subNav li:hover a {<br>
+				background-color:var(--nav-bg-hover-color) !important;<br>
+				text-decoration:underline;<br>
+				}<br>
+				#menu li span a:hover {<br>
+				color:var(--nav-hover-color) !important;<br>
+				background-color:var(--nav-bg-hover-color) !important;<br>
+				text-decoration: underline;<br>
+				}<br>
+				#menu .current {<br>
+				background-color: var(--nav-bg-hover-color) !important;<br>
+				color: var(--nav-hover-color) !important;<br>
+				margin:0;<br>
+				}<br>
+				#menu .subNav li:hover {<br>
+				height: 100%;<br>
+				}<br>
+				<br>
+				ul li:hover ul.subNav, ul li:focus ul.subNav {<br>
+				display: block;<br>
+				background-color: var(--nav-bg-color);<br>
+				z-index: 1;<br>
+				position:absolute;<br>
+				padding-right: 10px;<br>
+				}<br>
+				.notcurrent {<br>
+				padding: 8px;<br>
+				}<br>
+				#grid {<br>
+				display: flex;<br>
+				flex-wrap: wrap;<br>
+				}<br>
+				#grid h1 {<br>
+				margin-top: 10px;<br>
+				}<br>
+				#news, #panel0, #panel1, #panel2 {<br>
+				flex: 1;<br>
+				border-right: 15px solid #FFFFFF;<br>
+				}<br>
+				#panel3 {<br>
+				flex: 1;<br>
+				}<br>
+				details {<br>
+				border: 2px solid var(--panel-bg-color);<br>
+				border-radius: 2px;<br>
+				margin-bottom:10px;<br>
+				}<br>
+				details &gt; p, details &gt; li, details &gt; div {<br>
+				padding: 10px;<br>
+				}<br>
+				details &gt; li {<br>
+				margin-left: 10px;<br>
+				}<br>
+				summary {<br>
+				padding: 10px;<br>
+				background-color: var(--panel-bg-color);<br>
+				cursor:pointer;<br>
+				}<br>
+				th, td {<br>
+				border-bottom: 1px solid var(--table-border-color);<br>
+				padding: 10px 20px 10px 0;<br>
+				text-align: left;<br>
+				vertical-align: top;<br>
+				}<br>
+				table {<br>
+				width: 100%;<br>
+				}<br>
+				}<br>
+				<br>
+				/**** media query ****/<br>
+				@media only screen and (max-width: 1020px) {<br>
+				<br>
+				main,section, aside {width:100%; float:none;}<br>
+				#searchform {width:100%;margin:20px 0;}<br>
+				#q {width:74%;}<br>
+				<br>
+				#mobile-main-menu {<br>
+				background-color: var(--nav-bg-color);<br>
+				color: var(--nav-color);<br>
+				padding: 2px 0;<br>
+				display: block;<br>
+				height: 50px;<br>
+				position: relative;<br>
+				text-align: center;<br>
+				width: 100%;<br>
+				font-size:18px;<br>
+				}<br>
+				#mobile-main-menu i {<br>
+				float: right;<br>
+				padding: 8px;<br>
+				}<br>
+				#mobile-main-menu span {<br>
+				line-height: 3;<br>
+				}<br>
+				#menu {<br>
+				display: block;<br>
+				font-size: 1.3em;<br>
+				padding: 0;<br>
+				margin: 0;<br>
+				}<br>
+				#bars {<br>
+				float: right;<br>
+				margin: 5px;<br>
+				}<br>
+				.chevron::before {<br>
+				border-style: solid;<br>
+				border-width: 0.25em 0.25em 0 0;<br>
+				content: '';<br>
+				display: inline-block;<br>
+				height: 0.45em;<br>
+				left: 0.15em;<br>
+				position: relative;<br>
+				top: 0.25em;<br>
+				vertical-align: top;<br>
+				width: 0.45em;<br>
+				transform: rotate(135deg);<br>
+				float:right;<br>
+				transition: 0.2s;<br>
+				}<br>
+				.opened.chevron::before {<br>
+				top: 0.15em;<br>
+				transform: rotate(-45deg);<br>
+				transition: 0.2s;<br>
+				}<br>
+				#menu .current {<br>
+				background-color: var(--nav-bg-color) !important;<br>
+				}<br>
+				.navHide {<br>
+				opacity:0;<br>
+				max-height:0;<br>
+				transition:opacity .1s linear;<br>
+				display: none;<br>
+				}<br>
+				.navShow {<br>
+				opacity:1;<br>
+				max-height:100%;<br>
+				transition: opacity .5s linear;<br>
+				display: block;<br>
+				}<br>
+				.bar1, .bar2, .bar3 {<br>
+				width: 35px;<br>
+				height: 5px;<br>
+				background-color:#FFFFFF;<br>
+				margin: 6px 0;<br>
+				transition: 0.4s;<br>
+				}<br>
+				.close .bar1 {<br>
+				transform: rotate(-45deg) translate(-9px, 6px);<br>
+				}<br>
+				.close .bar2 {<br>
+				opacity: 0;<br>
+				}<br>
+				.close .bar3 {<br>
+				transform: rotate(45deg) translate(-8px, -8px);<br>
+				}<br>
+				#grid {<br>
+				flex-wrap: wrap;<br>
+				padding-bottom: 5px;<br>
+				}<br>
+				#grid img, #hero, #container picture {display:none;}<br>
+				}<br>
+				<br>
+				/**** media query ****/<br>
+				@media only screen and (min-width: 769px) and (max-width: 1020px) {<br>
+				body {<br>
+				width: 96% !important;<br>
+				margin-top: 20px;<br>
+				}<br>
+				main,section, aside {width:100%; float:none;}<br>
+				#grid {width:100%;margin:20px 0;}<br>
+				<br>
+				#searchform {<br>
+				float: right !important;<br>
+				margin-top: 15px !important;<br>
+				margin-bottom: 15px !important;<br>
+				}<br>
+				#menu li a {<br>
+				margin-left: 0px;<br>
+				}<br>
+				.subNav li {<br>
+				margin-left:-20px;<br>
+				}<br>
+				footer {<br>
+				min-height: 250px;<br>
+				}<br>
+				#nav, #top, #container, footer {<br>
+				margin: 0 auto;<br>
+				width: 100%;<br>
+				}<br>
+				#container {<br>
+				max-width: 760px;<br>
+				width: 100%;<br>
+				padding: 15px 0 15px 20px;<br>
+				margin-left: auto;<br>
+				margin-right: auto;<br>
+				}<br>
+				.chevron {<br>
+				padding-left:10px;<br>
+				background-color: var(--nav-bg-color);<br>
+				color: var(--nav-color);<br>
+				}<br>
+				#menu .subNav li {<br>
+				padding-left:40px;<br>
+				}<br>
+				.showSubNav {<br>
+				display:block;<br>
+				padding-left:0;<br>
+				margin-left:0;<br>
+				}<br>
+				#grid img, #hero, #container picture {display:none;}<br>
+				}<br>
+				<br>
+				/**** media query ****/<br>
+				@media only screen and (min-width: 577px) and (max-width: 768px) {<br>
+				body {<br>
+				width: 95% !important;<br>
+				margin-top: 20px;<br>
+				}<br>
+				main,section, aside {width:100%; float:none;}<br>
+				aside {padding-top:10px;}<br>
+				#grid {width:100%;margin:20px 0;}<br>
+				<br>
+				#searchform {<br>
+				float: right !important;<br>
+				margin-top: 15px !important;<br>
+				margin-bottom: 15px !important;<br>
+				}<br>
+				#menu li a {<br>
+				margin-left: 0px;<br>
+				}<br>
+				.subNav li {<br>
+				padding-left:0;<br>
+				margin-left:-20px;<br>
+				}<br>
+				#nav, #top, #container, footer {<br>
+				margin: 0 auto;<br>
+				width: 95%;<br>
+				}<br>
+				footer {<br>
+				min-height: 250px;<br>
+				}<br>
+				#container {<br>
+				/*padding: 15px;*/<br>
+				margin-left: auto;<br>
+				margin-right: auto;<br>
+				}<br>
+				.showSubNav {<br>
+				display:block;<br>
+				}<br>
+				#grid img, #hero, #container picture {display:none;}<br>
+				}<br>
+				<br>
+				/**** media query ****/<br>
+				@media only screen and (max-width: 576px) {<br>
+				<br>
+				.logo {<br>
+				background-image: url(<mark>https://www.dgsafetyadvisers.org.uk/images/DGDT/small-DGDTlogo.jpg</mark>);<br>
+				background-repeat: no-repeat;<br>
+				text-indent: -300%;<br>
+				height: 30px;<br>
+				width: 333px;<br>
+				display: block;<br>
+				}<br>
+				body {<br>
+				width: 92% !important;<br>
+				margin:0 auto;<br>
+				}<br>
+				header {margin-top:20px;}<br>
+				aside {padding-top:10px;}<br>
+				<br>
+				#searchform {<br>
+				margin-top: 15px !important;<br>
+				margin-bottom: 20px !important;<br>
+				}<br>
+				#q {width:260px; padding:8px 2px;}<br>
+				<br>
+				#menu li a {<br>
+				margin-left: -10px;<br>
+				}<br>
+				#menu li:hover {background-color: var(--nav-bg-color)!important;}<br>
+				#menu li .subNav li a {<br>
+				margin-left:-20px !important;<br>
+				}<br>
+				#nav, #top, #container {<br>
+				margin: 0 auto;<br>
+				width: 100%;<br>
+				}<br>
+				footer {<br>
+				width:92%;<br>
+				min-height:350px;<br>
+				margin:20px 0;<br>
+				}<br>
+				footer ul {padding:0;}<br>
+				#container {<br>
+				margin-left: auto;<br>
+				margin-right: auto;<br>
+				}<br>
+				#menu li.menu-item.chevron {<br>
+				padding:12px;<br>
+				}<br>
+				.menu-item a, .spanMenu {<br>
+				padding:12px;<br>
+				text-decoration:none;<br>
+				}<br>
+				#grid section {<br>
+				padding: 10px 0;<br>
+				margin:20px 0;<br>
+				}<br>
+				.showSubNav {<br>
+				display:block;<br>
+				}<br>
+				#grid img, #hero, #container picture {display:none;}<br>
+				}<br>
+				<br>
+				/**** media query ****/<br>
+				@media (prefers-color-scheme: dark) {}<br>
+				<br>
+				/**** media query ****/<br>
+				@media (prefers-color-scheme: light) {}<br></code>
+			</article>
+			<p>5. Change the parts in <mark>yellow</mark> to refelct your site.</p>
+			<p>6. <strong>Save</strong> the text file and <strong>Publish</strong> it.</p>
+			<p>You should have something like this:</p><img alt="CSS" src="https://liamobyrne.com/img/css.png">
+		</article>
+		<hr>
+		<div class="pagebreak"></div>
+		<article id="recaptcha">
+			<h2>2. Register site with reCAPTCHA v3</h2>
+			<p>1. Log in to <a href="https://www.google.com/recaptcha/admin">Google reCAPTCHA</a>.</p>
+			<p>2. Select <img alt="Add button" id="add" src="https://liamobyrne.com/img/add.png"> and register your site.</p><img alt="Register a new site" src="https://liamobyrne.com/img/Register-Site.png">
+			<p>3. Select <strong>Submit</strong>.</p>
+			<p>4. You will now see both your site key and secret key. Take a note of the secret key as you will need this for the next part.</p>
+		</article>
+		<hr>
+		<div class="pagebreak">
+			<article id="js">
+				<h2>3. Create the JavaScript</h2>
+				<p>1. Navigate to <strong>assets &gt; js</strong>.</p>
+				<p>2. Select <strong>Create folder</strong>, name it the same name of your site (e.g. DGDT) and <strong>Publish</strong> it.</p>
+				<p>3. In the folder, select <strong>Create text file</strong> and insert the following:</p>
+				<ul>
+					<li>Name: main.js</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: javascript</li>
+					<li>Syntax: JS</li>
+				</ul>
+				<p>4. Copy and paste the JavaScript below.</p><button class="copy" onclick="copyToClipboard('#codeJS')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeJS">document.getElementById(&quot;mobile-main-menu&quot;).addEventListener(&quot;click&quot;, function(e){<br>
+					let mmm = document.getElementById(&quot;mobile-main-menu&quot;);<br>
+					mmm.classList.toggle(&quot;close&quot;);<br>
+					let mobileMenu = document.getElementById('nav');<br>
+					mobileMenu.classList.toggle(&quot;navHide&quot;);<br>
+					mobileMenu.classList.toggle(&quot;navShow&quot;);<br>
+					});<br>
+					<br>
+					var topMenus = document.querySelectorAll('.menu-item &gt; a');<br>
+					for (var i = 0; i &lt; topMenus.length; i++) {<br>
+					topMenus[i].addEventListener('focus', function(event) {<br>
+					var subNavs = document.querySelectorAll('.showSubNav');<br>
+					for (var j = 0; j &lt; subNavs.length; j++) {<br>
+					subNavs[j].classList.remove('showSubNav')<br>
+					}<br>
+					var opened = document.querySelectorAll('.opened');<br>
+					for (j = 0; j &lt; opened.length; j++) {<br>
+					opened[j].classList.remove('opened')<br>
+					}<br>
+					var openMenus=document.querySelectorAll('[aria-expanded=&quot;true&quot;]');<br>
+					for (j = 0; j &lt; openMenus.length; j++) {<br>
+					openMenus[j].setAttribute(&quot;aria-expanded&quot;, false);<br>
+					}<br>
+					});<br>
+					}<br>
+					<br>
+					var subMenus = document.querySelectorAll('a.chevron');<br>
+					for (var i = 0; i &lt; subMenus.length; i++) {<br>
+					subMenus[i].addEventListener('click', function(event) {<br>
+					event.target.classList.toggle(&quot;opened&quot;);<br>
+					event.target.setAttribute(&quot;aria-expanded&quot;, true);<br>
+					var targetElement = event.target.nextElementSibling;<br>
+					var subMenu=targetElement.children[0];<br>
+					targetElement.classList.toggle(&quot;opened&quot;);<br>
+					targetElement.classList.toggle(&quot;showSubNav&quot;);<br>
+					targetElement.focus();<br>
+					});<br>
+					}<br>
+					window.addEventListener(&quot;keydown&quot;, function(event) {<br>
+					var keyPressed = event.which;<br>
+					if (keyPressed == 13 || keyPressed == 32 || keyPressed == 40) {<br>
+					var focused = document.activeElement;<br>
+					if (focused.getAttribute('aria-haspopup')) {<br>
+					focused.setAttribute(&quot;aria-expanded&quot;, true);<br>
+					var targetElement = focused.nextElementSibling;<br>
+					var subMenu=targetElement.children[0].children[0];<br>
+					targetElement.classList.toggle(&quot;opened&quot;);<br>
+					targetElement.classList.toggle(&quot;showSubNav&quot;);<br>
+					subMenu.focus();<br>
+					}<br>
+					}<br>
+					});<br></code>
+				</article>
+				<p>5. <strong>Save</strong> the text file and <strong>Publish</strong> it.</p><img alt="Main JavaScript" src="https://liamobyrne.com/img/js.png">
+				<p>6. In the folder, select <strong>Create text file</strong> and insert the following:</p>
+				<ul>
+					<li>Name: cookie-control-v9.js</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: javascript</li>
+					<li>Syntax: JS</li>
+				</ul>
+				<p>7. Copy and paste the JavaScript below.</p><button class="copy" onclick="copyToClipboard('#codeJS2')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeJS2">var cc_config = {<br>
+					position: &quot;<mark>LEFT</mark>&quot;,<br>
+					apiKey: '<mark>0000000000000000000000000000000000000000</mark>',<br>
+					product: 'PRO_MULTISITE',<br>
+					initialState: &quot;NOTIFY&quot;,<br>
+					necessaryCookies: ['JSESSIONID', 'HASQA'],<br>
+					optionalCookies: [<br>
+					{<br>
+					name : 'analytics',<br>
+					label: 'Analytical Performance Cookies',<br>
+					description: 'Counts the number of visitors and how visitors move around the website (does not collect personal information).',<br>
+					cookies: [<br>
+					// Google Analytics<br>
+					'_utma', '_utmb', '_utmc', '_utmt', '_utmz', '_ga', '_gat', '_gid'<br>
+					],<br>
+					initialConsentState: &quot;on&quot;,<br>
+					onAccept : function(){<br>
+					<br>
+					localStorage.removeItem(&quot;analyticsRevoked&quot;);<br>
+					<br>
+					<mark class="teal">// Google Tag Manager<br>
+					(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':<br>
+					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],<br>
+					j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=<br>
+					'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);<br>
+					})(window,document,'script','dataLayer','GTM-0000000');<br>
+					// End Google Tag Manager</mark><br>
+					},<br>
+					onRevoke: function(){<br>
+					// Disable Google Analytics<br>
+					window['ga-disable-UA-<mark class="teal">00000000</mark>-1'] = true;<br>
+					// End Google Analytics<br>
+					<br>
+					// Remember on Revoke<br>
+					localStorage.setItem(&quot;analyticsRevoked&quot;, &quot;true&quot;);<br>
+					}<br>
+					}<br>
+					],<br>
+					<br>
+					text : {<br>
+					notifyTitle: 'We use cookies to give you the best possible experience...',<br>
+					notifyDescription: 'If you don\'t want to accept cookies you can change preferences',<br>
+					title: 'This site uses cookies.',<br>
+					intro: 'Some of these cookies are essential, while others help us to improve your experience by providing insights into how the site is being used.',<br>
+					necessaryTitle : 'Necessary Cookies',<br>
+					necessaryDescription : 'Required for the operation of the website.',<br>
+					thirdPartyTitle : 'Warning: Some cookies require your attention',<br>
+					thirdPartyDescription : 'Consent for the following cookies could not be automatically revoked. Please follow the link(s) below to opt out manually.',<br>
+					acceptRecommended: 'Accept'<br>
+					},<br>
+					statement : {<br>
+					description: 'For more information visit our',<br>
+					name : 'Cookies Statement',<br>
+					url: 'https://www.sqa.org.uk/sqa/1432.html',<br>
+					updated : <mark>'24/05/2019'</mark><br>
+					},<br>
+					branding : {<br>
+					alertBackground: &quot;<mark>#28828C</mark>&quot;,<br>
+					fontColor: &quot;<mark>#FFFFFF</mark>&quot;,<br>
+					backgroundColor: &quot;<mark>#3E3E3F</mark>&quot;,<br>
+					toggleText: &quot;<mark>#000000</mark>&quot;,<br>
+					toggleColor: &quot;<mark>#28828C</mark>&quot;,<br>
+					toggleBackground: &quot;<mark>#FFFFFF</mark>&quot;,<br>
+					buttonIcon: null,<br>
+					buttonIconWidth: &quot;64px&quot;,<br>
+					buttonIconHeight: &quot;64px&quot;,<br>
+					removeIcon: false,<br>
+					removeAbout: false,<br>
+					acceptBackground: &quot;<mark>#FFFFFF</mark>&quot;,<br>
+					acceptText: &quot;<mark>#000000</mark>&quot;,<br>
+					rejectBackground: &quot;<mark>#000000</mark>&quot;,<br>
+					rejectText: &quot;<mark>#FFFFFF</mark>&quot;<br>
+					},<br>
+					accessibility : {<br>
+					outline: true<br>
+					}<br>
+					};<br>
+					<br>
+					CookieControl.load( cc_config );</code>
+				</article>
+				<p>Change the parts in <mark>yellow</mark> to refelct the style of your site. Follow the instructions in section <a href="#gtm">21. Implement Google Tag Manager</a> to update the section highlighted in <mark class="teal">teal</mark>.</p>
+				<p>8. <strong>Save</strong> the text file and <strong>Publish</strong> it.</p><img alt="JavaScript" src="https://liamobyrne.com/img/js2.png">
+				<p>9. Navigate to <strong>assets &gt; scripts</strong>.</p>
+				<p>10. Select <strong>Create folder</strong>, name it the same name of your site (e.g. DGDT) and <strong>Publish</strong> it.</p>
+				<p>11. In the folder, select <strong>Create text file</strong> and insert the following:</p>
+				<ul>
+					<li>Name: contact.js</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: javascript</li>
+					<li>Syntax: JS</li>
+				</ul>
+				<p>12. Copy and paste the JavaScript below.</p><button class="copy" onclick="copyToClipboard('#codeScript')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeScript">var ccc = Packages.ccc;<br>
+					var resources = services.getResources();<br>
+					<br>
+					// Form fields<br>
+					var name = request.getParameter(&quot;name&quot;);<br>
+					var email = request.getParameter(&quot;email&quot;);<br>
+					var enquiry = request.getParameter(&quot;enquiry&quot;);<br>
+					var comments = request.getParameter(&quot;comments&quot;);<br>
+					<br>
+					// Validation<br>
+					var errors = new java.util.ArrayList();<br>
+					if (name==null || 0==name.trim().length()) {<br>
+					errors.add(&quot;&lt;a href='#name'&gt;Please enter your name&lt;/a&gt;\n&quot;);<br>
+					}<br>
+					if (email==null || 0==email.trim().length()) {<br>
+					errors.add(&quot;&lt;a href='#email'&gt;Please enter your e-mail address&lt;/a&gt;\n&quot;);<br>
+					} else if (!ccc.api.types.EmailAddress.isValidText(email)) {<br>
+					errors.add(&quot;&lt;a href='#email'&gt;Please enter your e-mail address&lt;/a&gt;\n&quot;);<br>
+					}<br>
+					if (enquiry==null || 0==enquiry.trim().length()) {<br>
+					errors.add(&quot;&lt;a href='#enquiry'&gt;Please select your enquiry&lt;/a&gt;\n&quot;);<br>
+					}<br>
+					if (comments==null || 0==comments.trim().length()) {<br>
+					errors.add(&quot;&lt;a href='#comments'&gt;Please enter your comments&lt;/a&gt;\n&quot;);<br>
+					}<br>
+					<br>
+					// reCAPTCHA v3<br>
+					var secret = &quot;<mark class="teal">0000000000000000000000000000000000000000</mark>&quot;;<br>
+					var userResponse = request.getParameter(&quot;g-recaptcha-response&quot;);<br>
+					var remoteip = request.getHeader(&quot;X-Forwarded-For&quot;);<br>
+					if (remoteip == null || remoteip.length() == 0 || &quot;unknown&quot;.equalsIgnoreCase(remoteip)) {<br>
+					remoteip = request.getHeader(&quot;X-Civic-Real-IP&quot;);<br>
+					}<br>
+					if (remoteip == null || remoteip.length() == 0 || &quot;unknown&quot;.equalsIgnoreCase(remoteip)) {<br>
+					remoteip = request.getRemoteAddr();<br>
+					}<br>
+					var body = &quot;secret=&quot; + secret + &quot;&amp;remoteip=&quot; + remoteip + &quot;&amp;response=&quot; + userResponse;<br>
+					var mt = new Packages.ccc.api.types.MimeType(&quot;application&quot;, &quot;x-www-form-urlencoded&quot;)<br>
+					var resp = Packages.ccc.commons.HTTP.post(&quot;https://www.google.com/recaptcha/api/siteverify&quot;, body, mt, 10000);<br>
+					var captchaResponse = new org.json.JSONObject(resp);<br>
+					if (!captchaResponse.getBoolean(&quot;success&quot;)) {<br>
+					errors.add(&quot;We're having problems with reCAPTCHA - &quot; + captchaResponse.getString(&quot;error-codes&quot;));<br>
+					} else {<br>
+					var score = parseFloat(captchaResponse.getString(&quot;score&quot;));<br>
+					if (captchaResponse.getString(&quot;action&quot;) == &quot;validate_captcha&quot; &amp;&amp; score &gt; 0.3) {<br>
+					// errors.add(&quot;You are a human&quot;);<br>
+					} else {<br>
+					errors.add('There is a problem submitting your form. Please contact &lt;a href=&quot;mailto:<mark>adr@sqa.org.uk</mark>&quot;&gt;<mark>DGDT</mark>&lt;/a&gt; quoting reference v3'+score);<br>
+					}<br>
+					}<br>
+					// End reCAPTCHA v3<br>
+					<br>
+					if (0==errors.size())<br>
+					{<br>
+					var fromAddress = new ccc.api.types.EmailAddress(&quot;no-reply@apps.sqa.org.uk&quot;);<br>
+					var toAddress = new ccc.api.types.EmailAddress(&quot;<mark>adr@sqa.org.uk</mark>&quot;);<br>
+					<br>
+					var subject = &quot;Contact us&quot;;<br>
+					var message = &quot;Name: &quot;+name+&quot; \n&quot;<br>
+					+ &quot;Email: &quot;+email+&quot; \n&quot;<br>
+					+ &quot;Enquiry: &quot;+enquiry+&quot; \n&quot;m<br>
+					+ &quot;Comments: &quot;+comments+&quot; \n&quot;;<br>
+					<br>
+					mail.send(toAddress, fromAddress, subject, message);<br>
+					response.sendRedirect(&quot;<mark>https://www.dgdrivertraining.org.uk/DGDT/Thank-you</mark>?success=ok&quot;);<br>
+					}<br>
+					else<br>
+					{<br>
+					response.reset();<br>
+					request.setAttribute(&quot;Contact.errors&quot;, errors);<br>
+					request.setAttribute(&quot;name&quot;, name);<br>
+					request.setAttribute(&quot;email&quot;, email);<br>
+					request.setAttribute(&quot;enquiry&quot;, enquiry);<br>
+					request.setAttribute(&quot;comments&quot;, comments);<br>
+					request.getRequestDispatcher(&quot;/<mark>DGDT</mark>/Contact&quot;).forward(request, response);<br>
+					}<br></code>
+				</article>
+				<p>Change the parts in <mark>yellow</mark> to refelct the style of your site. Refer to <a href="https://www.google.com/recaptcha/admin">Google reCAPTCHA</a> and update the section highlighted in <mark class="teal">teal</mark> with your <strong>secret key</strong>.</p>
+				<p>13. <strong>Save</strong> the text file and <strong>Publish</strong> it.</p><img alt="Contact JS" src="https://liamobyrne.com/img/script.png">
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="includes">
+				<h2>4. Create the includes</h2>
+				<p>In this example, the html header, the header and footer sections are consistent across all pages so these are candidates for includes, but in other cases, you may want to create a left or right include depending on the design of the site.</p>
+				<p>1. Navigate to <strong>assets &gt; includes</strong>.</p>
+				<p>2. Select <strong>Create folder</strong>, name it the same name of your site (e.g. DGDT) and <strong>Publish</strong> it.</p>
+				<p>3. In the folder, select <strong>Create text file</strong> and include the following:</p>
+				<ul>
+					<li>File Name: inc_header</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: html</li>
+					<li>Syntax: HTML</li>
+				</ul>
+				<p class="onlineParagraph">4. Copy and paste the HTML below.</p>
+				<p class="printParagraph">4. Please refer to https://www.swqr.org.uk/web-team/boilerplate/index.html#includes.</p><button class="copy" onclick="copyToClipboard('#codeIncludeHeader')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeIncludeHeader">&lt;!-- Google Tag Manager (noscript) --&gt;<br>
+					&lt;noscript&gt;&lt;iframe title=&quot;Google Tag Manager&quot; src=&quot;https://www.googletagmanager.com/ns.html?id=<mark class="teal">GTM-0000000</mark>&quot; height=&quot;0&quot; width=&quot;0&quot; style=&quot;display:none;visibility:hidden&quot;&gt;&lt;/iframe&gt;&lt;/noscript&gt;<br>
+					&lt;!-- End Google Tag Manager (noscript) --&gt;<br>
+					&lt;ul class=&quot;skiplinks&quot;&gt;<br>
+					&lt;li&gt;&lt;a href=&quot;#container&quot;&gt;Skip to content&lt;/a&gt;&lt;/li&gt;<br>
+					&lt;li&gt;&lt;a href=&quot;#nav&quot;&gt;Skip to main navigation&lt;/a&gt;&lt;/li&gt;<br>
+					&lt;li&gt;&lt;a href=&quot;/<mark>DGDT</mark>/accessibility&quot;&gt;Skip to accessibility page&lt;/a&gt;&lt;/li&gt;<br>
+					&lt;/ul&gt;<br>
+					&lt;header&gt;<br>
+					&lt;div id=&quot;top&quot;&gt;<br>
+					&lt;span id=&quot;topleft&quot;&gt;<br>
+					&lt;a href=&quot;/<mark>DGDT</mark>/Home&quot;&gt;<br>
+					&lt;span class=&quot;logo&quot;&gt;<mark>Logo title</mark>&lt;/span&gt;<br>
+					&lt;/a&gt;<br>
+					&lt;/span&gt;<br>
+					&lt;div id=&quot;topright&quot;&gt;<br>
+					&lt;form id=&quot;searchform&quot; style=&quot;float:right;&quot; action=&quot;/<mark>DGDT</mark>/Search-results&quot; method=&quot;get&quot; enctype=&quot;multipart/form-data&quot;&gt;<br>
+					&lt;label for=&quot;q&quot;&gt;&lt;span class=&quot;visuallyhidden&quot;&gt;Search&lt;/span&gt;&lt;input id=&quot;q&quot; name=&quot;q&quot; size=&quot;30&quot; placeholder=&quot;Enter search term&quot; /&gt;&lt;/label&gt;<br>
+					&lt;input type=&quot;submit&quot; id=&quot;submit&quot; value=&quot;Search&quot; title=&quot;Search&quot; /&gt;<br>
+					&lt;/form&gt;<br>
+					&lt;/div&gt;<br>
+					&lt;/div&gt;<br>
+					&lt;div id=&quot;navbar&quot;&gt;<br>
+					&lt;div id=&quot;mobile-main-menu&quot;&gt;<br>
+					&lt;span&gt;Main Menu&lt;/span&gt;<br>
+					&lt;div id=&quot;bars&quot;&gt;<br>
+					&lt;div class=&quot;bar1&quot;&gt;&lt;/div&gt;<br>
+					&lt;div class=&quot;bar2&quot;&gt;&lt;/div&gt;<br>
+					&lt;div class=&quot;bar3&quot;&gt;&lt;/div&gt;<br>
+					&lt;/div&gt;<br>
+					&lt;/div&gt;<br>
+					&lt;nav id=&quot;nav&quot; class=&quot;navHide&quot;&gt;<br>
+					&lt;ul id=&quot;menu&quot;&gt;<br>
+					##set ($startLevel = 1)<br>
+					##set ($endLevel = 1)<br>
+					##menuTag()<br>
+					## Get base level menu items<br>
+					#set ($menuPages = $resources.list($resources.resourceForPathSecure(&quot;/<mark>DGDT</mark>/&quot;).getId(), null, null, null, &quot;true&quot;, null, null, &quot;true&quot;, &quot;manual&quot;, $enums.of(&quot;ccc.api.types.SortOrder&quot;, &quot;ASC&quot;), 1, 100).getElements())<br>
+					## Iterate through them, and if some are folders, search for menu items under them<br>
+					#foreach ($menuPageRS in $menuPages)<br>
+					#if ($menuPageRS.getId().equals($resource.getId()) || $menuPageRS.getId().equals($resource.getParent()))<br>
+					#set ($extraClass = &quot;current&quot;)<br>
+					#else<br>
+					#set ($extraClass = &quot;&quot;)<br>
+					#end<br>
+					## We found a folder, so retrieve all menu items under it for the drop down menu.<br>
+					#if ($menuPageRS.getType().toString().equals(&quot;FOLDER&quot;))<br>
+					#set ($thisMenuPages = $resources.list($menuPageRS.getId(), null, null, null, &quot;true&quot;, null, null, &quot;true&quot;, &quot;manual&quot;, $enums.of(&quot;ccc.api.types.SortOrder&quot;, &quot;ASC&quot;), 1, 100).getElements())<br>
+					#if ($thisMenuPages.size() &gt; 0)<br>
+					#foreach ($thisMenuPageRS in $thisMenuPages)<br>
+					#if ($resource.getParent().equals($thisMenuPageRS.getId()))<br>
+					#set ($parentExtra = &quot;open&quot;)<br>
+					#break<br>
+					#else<br>
+					#set ($parentExtra = &quot;&quot;)<br>
+					#end<br>
+					#end<br>
+					&lt;li class=&quot;menu-item $!extraClass $!parentExtra&quot;&gt;<br>
+					&lt;a href=&quot;javascript:void(0);&quot; class=&quot;chevron&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;$menuPageRS.getName().replaceAll(&quot;_&quot;,&quot; &quot;).replaceAll(&quot;-&quot;,&quot; &quot;)&lt;/a&gt;<br>
+					&lt;ul class=&quot;subNav&quot;&gt;<br>
+					#foreach ($thisMenuPageRS in $thisMenuPages)<br>
+					#if ($resource.getParent().equals($thisMenuPageRS.getId()))<br>
+					&lt;li class=&quot;current&quot;&gt;<br>
+					$thisMenuPageRS.getName().replaceAll(&quot;_&quot;,&quot; &quot;).replaceAll(&quot;-&quot;,&quot; &quot;)<br>
+					&lt;/li&gt;<br>
+					#else<br>
+					&lt;li class=&quot;notcurrent&quot;&gt;<br>
+					&lt;a href=&quot;$thisMenuPageRS.getAbsolutePath()&quot;&gt;$thisMenuPageRS.getName().replaceAll(&quot;_&quot;,&quot; &quot;).replaceAll(&quot;-&quot;,&quot; &quot;)&lt;/a&gt;<br>
+					&lt;/li&gt;<br>
+					#end<br>
+					#end<br>
+					&lt;/ul&gt;<br>
+					&lt;/li&gt;<br>
+					#else<br>
+					#if ($resource.getParent().equals($menuPageRS.getId()))<br>
+					&lt;li class=&quot;$!extraClass&quot;&gt;<br>
+					$menuPageRS.getName().replaceAll(&quot;_&quot;,&quot; &quot;).replaceAll(&quot;-&quot;,&quot; &quot;)<br>
+					&lt;/li&gt;<br>
+					#else<br>
+					&lt;li class=&quot;$!extraClass&quot;&gt;<br>
+					&lt;a href=&quot;$menuPageRS.getAbsolutePath()&quot;&gt;$menuPageRS.getName().replaceAll(&quot;_&quot;,&quot; &quot;).replaceAll(&quot;-&quot;,&quot; &quot;)&lt;/a&gt;<br>
+					&lt;/li&gt;<br>
+					#end<br>
+					#end<br>
+					#else<br>
+					#if ($menuPageRS.getId().equals($resource.getId()) || $menuPageRS.getId().equals($resource.getParent()))<br>
+					&lt;li class=&quot;menu-item $!extraClass&quot;&gt;<br>
+					&lt;span class=&quot;spanMenu&quot;&gt;$menuPageRS.getName().replaceAll(&quot;_&quot;,&quot; &quot;).replaceAll(&quot;-&quot;,&quot; &quot;)&lt;/span&gt;<br>
+					&lt;/li&gt;<br>
+					#else<br>
+					&lt;li class=&quot;menu-item $!extraClass&quot;&gt;<br>
+					&lt;span class=&quot;spanMenu&quot;&gt;&lt;a href=&quot;$menuPageRS.getAbsolutePath()&quot;&gt;$menuPageRS.getName().replaceAll(&quot;_&quot;,&quot; &quot;).replaceAll(&quot;-&quot;,&quot; &quot;)&lt;/a&gt;&lt;/span&gt;<br>
+					&lt;/li&gt;<br>
+					#end<br>
+					#end<br>
+					#end<br>
+					&lt;/ul&gt;<br>
+					&lt;/nav&gt;<br>
+					&lt;/div&gt;<br>
+					&lt;/header&gt;</code>
+				</article>
+				<p>5. Change the parts in <mark>yellow</mark> to reflect your site. Change <mark class="teal">GTM-0000000</mark> to reflect your <strong>Container ID</strong>. Follow the instructions in section <a href="#gtm">21. Implement Google Tag Manager</a>.</p>
+				<p>6. <strong>Save</strong> the text file and <strong>Publish</strong> it.</p>
+				<p>7. Select <strong>Create text file</strong> in the same folder and include the following:</p>
+				<ul>
+					<li>File Name: inc_html_head</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: html</li>
+					<li>Syntax: HTML</li>
+				</ul>
+				<p>8. Copy and paste the HTML below.</p><button class="copy" onclick="copyToClipboard('#codeHTMLHead')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeHTMLHead">&lt;head&gt;<br>
+					&lt;meta charset=&quot;utf-8&quot;&gt;<br>
+					&lt;title&gt;$resource.getTitle()&lt;/title&gt;<br>
+					&lt;meta name=&quot;title&quot; content=&quot;$resource.getTitle()&quot;&gt;<br>
+					&lt;meta name=&quot;description&quot; content=&quot;$resource.getDescription()&quot;&gt;<br>
+					&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+					&lt;link rel=&quot;shortcut icon&quot; href=&quot;/images/favicon.ico&quot; /&gt;<br>
+					&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/<mark>DGDT</mark>/style.css&quot; type=&quot;text/css&quot;&gt;<br>
+					&lt;/head&gt;</code>
+				</article>
+				<p>9. Change the part in <mark>yellow</mark> to reflect your site.</p>
+				<p>10. <strong>Save</strong> the text file and <strong>Publish</strong> it.</p>
+				<p>11. Select <strong>Create text file</strong> in the same folder and include the following:</p>
+				<ul>
+					<li>File Name: inc_footer</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: html</li>
+					<li>Syntax: HTML</li>
+				</ul>
+				<p>12. Copy and paste the HTML below.</p><button class="copy" onclick="copyToClipboard('#codeFooter')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeFooter">&lt;footer&gt;<br>
+					&lt;div id=&quot;small-print&quot;&gt;<br>
+					&lt;p&gt;&lt;a href=&quot;/<mark>DGDT</mark>/accessibility&quot;&gt;Accessibility&lt;/a&gt;&lt;/p&gt;<br>
+					&lt;p&gt;&lt;a href=&quot;/<mark>DGDT</mark>/site-map&quot;&gt;Site map&lt;/a&gt;&lt;/p&gt;<br>
+					&lt;p&gt;&lt;a href=&quot;/<mark>DGDT</mark>/terms-and-conditions&quot;&gt;Terms and conditions&lt;/a&gt;&lt;/p&gt;<br>
+					&lt;p&gt;&amp;copy; 2020 Scottish Qualifications Authority&lt;/p&gt;<br>
+					&lt;/div&gt;<br>
+					&lt;div id=&quot;logos&quot;&gt;<br>
+					&lt;ul&gt;<br>
+					&lt;li&gt;&lt;a href=&quot;https://www.gov.uk/government/organisations/department-for-transport&quot;&gt;&lt;img width=&quot;130&quot; height=&quot;79&quot; src=&quot;/images/DGSA/DFTlogo.png&quot; alt=&quot;Department for Transport logo&quot; /&gt;&lt;/a&gt;&lt;/li&gt;<br>
+					&lt;li&gt;&lt;a href=&quot;https://www.gov.uk/government/organisations/driver-and-vehicle-standards-agency&quot;&gt;&lt;img width=&quot;130&quot; height=&quot;79&quot; src=&quot;/images/DGSA/DVSAlogo.png&quot; alt=&quot;Driver and Vehicle Standards Agency logo&quot; /&gt;&lt;/a&gt;&lt;/li&gt;<br>
+					&lt;li&gt;&lt;a href=&quot;https://www.sqa.org.uk&quot;&gt;&lt;img alt=&quot;Scottish Qualifications Authority logo&quot; width=&quot;115&quot; height=&quot;79&quot; src=&quot;/images/DGSA/SQA-logo.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;<br>
+					&lt;/ul&gt;<br>
+					&lt;/div&gt;<br>
+					&lt;/footer&gt;<br>
+					&lt;script defer src=&quot;https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js&quot;&gt;&lt;/script&gt;<br>
+					&lt;script defer src=&quot;/assets/js/<mark>DGDT</mark>/cookie-control-v9.js&quot;&gt;&lt;/script&gt;<br>
+					&lt;script defer src=&quot;/assets/js/<mark>DGDT</mark>/main.js&quot;&gt;&lt;/script&gt;</code>
+				</article>
+				<p>13. Change the parts in <mark>yellow</mark> to refelct your site.</p>
+				<p>14. <strong>Save</strong> the text file and <strong>Publish</strong> it.</p>
+				<p>You should have something like this:</p><img alt="Footer Include" src="https://liamobyrne.com/img/includes.png">
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="general">
+				<h2>5. Create a general page template</h2>
+				<p>1. Navigate to <strong>assets &gt; templates</strong>.</p>
+				<p>2. Select <strong>Create a folder</strong> with the name of your site (e.g. DGDT).</p>
+				<p>3. In the folder you created, select <strong>Create template</strong> for the general page and insert the following:</p>
+				<ul>
+					<li>Name: e.g. <mark>DGDT</mark>-general</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: html</li>
+				</ul>
+				<p>4. Click Next.</p>
+				<p>5. In the Definition XML window, replace &lt;fields&gt;&lt;/fields&gt; with:</p><button class="copy" onclick="copyToClipboard('#codeGeneralXML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeGeneralXML">&lt;fields&gt;<br>
+					&lt;field name=&quot;header&quot; type=&quot;text_field&quot; title=&quot;Header&quot; description=&quot;Header&quot;/&gt;<br>
+					&lt;field name=&quot;subjectImage&quot; type=&quot;image&quot; title=&quot;Subject Image&quot; description=&quot;Subject Image&quot;/&gt;<br>
+					&lt;field name=&quot;altTextSubjectImage&quot; type=&quot;text_field&quot; title=&quot;Alt Text Subject Image&quot; description=&quot;Alt Text Subject Image&quot;/&gt;<br>
+					&lt;field name=&quot;content&quot; type=&quot;html&quot; title=&quot;Content&quot; description=&quot;Content&quot;/&gt;<br>
+					&lt;/fields&gt;</code>
+				</article>
+				<p>There are 3 types of fields you can feature in your XML:</p>
+				<ul>
+					<li>text_field: a basic text editor enabling you to add text.</li>
+					<li>image: an image selector enabling you to select an image from the CMS.</li>
+					<li>html: a rich text editor enabling you to add hyperlinks and style text.</li>
+				</ul>
+				<p>You can have as many fields as you want, just be sure to name them appropriately. See how they match up when you are <a href="#populate">creating a page using a template</a>.</p>
+				<p>If a field name defined in your XML does not match with HTML below, you will not see your content for that particular field.</p>
+				<p>6. Click Next.</p>
+				<p class="onlineParagraph">7. In the Body window, copy and paste the following:</p>
+				<p class="printParagraph">7. Please refer to https://www.swqr.org.uk/web-team/boilerplate/index.html#general.</p><button class="copy" onclick="copyToClipboard('#codeGeneralHTML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeGeneralHTML">#set($uniqueId = $resources.resourceForPathSecure(&quot;/<mark>DGDT</mark>/site-info&quot;).getId())<br>
+					#set($related = $pages.retrieve($uniqueId).getParagraph(&quot;related&quot;).getText())<br>
+					&lt;!DOCTYPE html&gt;<br>
+					&lt;html lang=&quot;en&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_html_head&quot;)<br>
+					&lt;body id=&quot;DGDT&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_header&quot;)<br>
+					&lt;main id=&quot;container&quot;&gt;<br>
+					&lt;section&gt;<br>
+					&lt;h1&gt;$resource.getParagraph(&quot;header&quot;).getText()&lt;/h1&gt;<br>
+					#if($resource.getParagraph(&quot;altTextSubjectImage&quot;) &amp;&amp; $resource.getParagraph(&quot;altTextSubjectImage&quot;).getText().length() &gt; 0)<br>
+					&lt;img loading=&quot;lazy&quot; id=&quot;hero&quot; alt=&quot;$!resource.getParagraph('altTextSubjectImage').getText()&quot; src=&quot;#optionalImage('subjectImage')&quot; width=&quot;860&quot; height=&quot;240&quot;/&gt;<br>
+					#end<br>
+					$!resource.getParagraph(&quot;content&quot;).getText()<br>
+					&lt;/section&gt;<br>
+					&lt;aside&gt;<br>
+					$related<br>
+					&lt;/aside&gt;<br>
+					&lt;/main&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_footer&quot;)<br>
+					&lt;/body&gt;<br>
+					&lt;/html&gt;</code>
+				</article>
+				<p>8. Change the parts in <mark>yellow</mark> to point to the includes files you created.</p>
+				<p>9. <strong>Save</strong> the template and <strong>Publish</strong> it.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="news">
+				<h2>6. Create a news page template</h2>
+				<p>1. Navigate to <strong>assets &gt; templates</strong>.</p>
+				<p>2. In the folder where you created the general page template, create a template for the news page and insert the following:</p>
+				<ul>
+					<li>Name: e.g. <mark>DGDT</mark>-news</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: html</li>
+				</ul>
+				<p>3. Click Next.</p>
+				<p>4. In the Definition XML window, replace &lt;fields&gt;&lt;/fields&gt; with:</p><button class="copy" onclick="copyToClipboard('#codeNewsXML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeNewsXML">&lt;fields&gt;<br>
+					&lt;field name=&quot;header&quot; type=&quot;text_field&quot; title=&quot;Header&quot; description=&quot;Header for the main section.&quot; /&gt;<br>
+					&lt;field name=&quot;summary&quot; type=&quot;html&quot; title=&quot;Summary&quot; description=&quot;Summary for the main section.&quot; /&gt;<br>
+					&lt;field name=&quot;content&quot; type=&quot;html&quot; title=&quot;Content&quot; description=&quot;Content of the main section.&quot; /&gt;<br>
+					&lt;/fields&gt;</code>
+				</article>
+				<p>5. Click Next.</p>
+				<p>6. In the Body window, copy and paste the following:</p><button class="copy" onclick="copyToClipboard('#codeNewsHTML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeNewsHTML">#set($uniqueId = $resources.resourceForPathSecure(&quot;/<mark>DGDT</mark>/site-info&quot;).getId())<br>
+					#set($related = $pages.retrieve($uniqueId).getParagraph(&quot;related&quot;).getText())<br>
+					&lt;!DOCTYPE html&gt;<br>
+					&lt;html lang=&quot;en&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_html_head&quot;)<br>
+					&lt;body id=&quot;<mark>DGDT</mark>&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_header&quot;)<br>
+					&lt;main id=&quot;container&quot;&gt;<br>
+					&lt;section&gt;<br>
+					&lt;article id=&quot;main_short&quot;&gt;<br>
+					&lt;h1&gt;$resource.getParagraph(&quot;header&quot;).getText()&lt;/h1&gt;<br>
+					$resource.getParagraph(&quot;content&quot;).getText()<br>
+					&lt;/article&gt;<br>
+					&lt;/section&gt;<br>
+					&lt;aside&gt;<br>
+					$related<br>
+					&lt;/aside&gt;<br>
+					&lt;/main&gt;<br>
+					#include (&quot;/assets/includes/<mark>DGDT</mark>/inc_footer&quot;)<br>
+					&lt;/body&gt;<br>
+					&lt;/html&gt;</code>
+				</article>
+				<p>See how we don't feature the summary field in the HTML? That's because we feature that on the <a href="index-contract.html#news-home">news home</a> and <a href="index-contract.html#home">home</a> pages.</p>
+				<p>7. Change the parts in <mark>yellow</mark> to point to the includes files you created.</p>
+				<p>8. <strong>Save</strong> the template and <strong>Publish</strong> it.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="news-home">
+				<h2>7. Create a news home page template</h2>
+				<p>1. Navigate to <strong>assets &gt; templates</strong>.</p>
+				<p>2. In the folder where you created the general page template, create a template for the news home page and insert the following:</p>
+				<ul>
+					<li>Name: e.g. <mark>DGDT</mark>-news-home</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: html</li>
+				</ul>
+				<p>3. Click Next.</p>
+				<p>4. In the Definition XML window, replace &lt;fields&gt;&lt;/fields&gt; with:</p><button class="copy" onclick="copyToClipboard('#codeSiteInfoXML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeSiteInfoXML">&lt;fields&gt;&lt;/fields&gt;</code>
+				</article>
+				<p>5. Click Next.</p>
+				<p class="onlineParagraph">6. In the Body window, copy and paste the following:</p>
+				<p class="printParagraph">6. Please refer to https://www.swqr.org.uk/web-team/boilerplate/index.html#news-home.</p><button class="copy" onclick="copyToClipboard('#codeNewsHomeHTML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeNewsHomeHTML">#set($uniqueId = $resources.resourceForPathSecure(&quot;/<mark>DGDT</mark>/site-info&quot;).getId())<br>
+					#set($related = $pages.retrieve($uniqueId).getParagraph(&quot;related&quot;).getText())<br>
+					&lt;!DOCTYPE html&gt;<br>
+					&lt;html lang=&quot;en&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_html_head&quot;)<br>
+					&lt;body&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_header&quot;)<br>
+					&lt;main id=&quot;container&quot;&gt;<br>
+					&lt;section&gt;<br>
+					&lt;h1&gt;News&lt;/h1&gt;<br>
+					#set($criteria = $apiTypes.createResourceCriteria())<br>
+					#set($folderResource=$resources.resourceForPathSecure(&quot;/<mark>DGDT</mark>/News&quot;))<br>
+					#set($folderResourceId=$folderResource.getId())<br>
+					$criteria.setParent($folderResourceId)<br>
+					$criteria.setPublished(true)<br>
+					## Only published resources<br>
+					$criteria.setType($enums.of(&quot;ccc.api.types.ResourceType&quot;,&quot;PAGE&quot;))<br>
+					## Only pages<br>
+					$criteria.setSortField(&quot;dateCreated&quot;)<br>
+					## Order by creation date, most recent first<br>
+					$criteria.setSortOrder($enums.of(&quot;ccc.api.types.SortOrder&quot;, &quot;DESC&quot;))<br>
+					#set($results = $resources.list($criteria,1,50).getElements())<br>
+					#foreach($result in $results)<br>
+					#if (!$result.getId().equals($folderResource.getIndexPage()))<br>
+					#set($resultPage=$pages.retrieve($result.getId()))<br>
+					&lt;div class=&quot;newsItem&quot;&gt;<br>
+					&lt;h2&gt;&lt;a href=&quot;$result.getAbsolutePath()&quot;&gt;$result.getTitle()&lt;/a&gt;&lt;/h2&gt;<br>
+					&lt;div&gt;$resultPage.getParagraph(&quot;summary&quot;).getText()&lt;/div&gt;<br>
+					&lt;/div&gt;<br>
+					#end<br>
+					#end<br>
+					&lt;/section&gt;<br>
+					&lt;aside&gt;$related&lt;/aside&gt;<br>
+					&lt;/main&gt;<br>
+					#include (&quot;/assets/includes/<mark>DGDT</mark>/inc_footer&quot;)<br>
+					&lt;/body&gt;<br>
+					&lt;/html&gt;</code>
+				</article>
+				<p>7. Change the parts in <mark>yellow</mark> to point to the includes files you created.</p>
+				<p>8. <strong>Save</strong> the template and <strong>Publish</strong> it.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="home">
+				<h2>8. Create a home page template</h2>
+				<p>1. Navigate to <strong>assets &gt; templates</strong>.</p>
+				<p>2. In the folder you created for the general page template, create another template for the home page and insert the following:</p>
+				<ul>
+					<li>Name: e.g. <mark>DGDT</mark>-home</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: html</li>
+				</ul>
+				<p>3. Click Next.</p>
+				<p>4. In the Definition XML window, replace &lt;fields&gt;&lt;/fields&gt; with:</p><button class="copy" onclick="copyToClipboard('#codeHomeXML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeHomeXML">&lt;fields&gt;<br>
+					&lt;field name=&quot;heroImage&quot; type=&quot;image&quot; title=&quot;Hero Image&quot; description=&quot;Width 1140px)&quot;/&gt;<br>
+					&lt;field name=&quot;heroImageSmall&quot; type=&quot;image&quot; title=&quot;Small Hero Image&quot; description=&quot;width 382px&quot;/&gt;<br>
+					&lt;field name=&quot;heroImageAlt&quot; type=&quot;text_field&quot; title=&quot;Hero Image Alt&quot; description=&quot;Hero Image Alt&quot;/&gt;<br>
+					&lt;field name=&quot;Description&quot; type=&quot;html&quot; title=&quot;Description&quot; description=&quot;Description&quot;/&gt;<br>
+					&lt;field name=&quot;panel0Image&quot; type=&quot;image&quot; title=&quot;Panel 0 Image&quot; description=&quot;Panel 0 Image&quot;/&gt;<br>
+					&lt;field name=&quot;panel0ImageAlt&quot; type=&quot;text_field&quot; title=&quot;Panel 0 Alt text&quot; description=&quot;Panel 0 Alt text&quot;/&gt;<br>
+					&lt;field name=&quot;panel0&quot; type=&quot;html&quot; title=&quot;No news panel&quot; description=&quot;Panel 0&quot;/&gt;<br>
+					&lt;field name=&quot;panel1Image&quot; type=&quot;image&quot; title=&quot;Panel 1 Image&quot; description=&quot;Panel 1 Image&quot;/&gt;<br>
+					&lt;field name=&quot;panel1ImageAlt&quot; type=&quot;text_field&quot; title=&quot;Panel 1 Alt text&quot; description=&quot;Panel 1 Alt text&quot;/&gt;<br>
+					&lt;field name=&quot;panel1&quot; type=&quot;html&quot; title=&quot;Panel 1&quot; description=&quot;Panel 1&quot;/&gt;<br>
+					&lt;field name=&quot;panel2Image&quot; type=&quot;image&quot; title=&quot;Panel 2 Image&quot; description=&quot;Panel 2 Image&quot;/&gt;<br>
+					&lt;field name=&quot;panel2ImageAlt&quot; type=&quot;text_field&quot; title=&quot;Panel 2 Alt text&quot; description=&quot;Panel 2 Alt text&quot;/&gt;<br>
+					&lt;field name=&quot;panel2&quot; type=&quot;html&quot; title=&quot;Panel 2&quot; description=&quot;Panel 2&quot;/&gt;<br>
+					&lt;field name=&quot;panel3Image&quot; type=&quot;image&quot; title=&quot;Panel 3 Image&quot; description=&quot;Panel 3 Image&quot;/&gt;<br>
+					&lt;field name=&quot;panel3ImageAlt&quot; type=&quot;text_field&quot; title=&quot;Panel 3 Alt text&quot; description=&quot;Panel 3 Alt text&quot;/&gt;<br>
+					&lt;field name=&quot;panel3&quot; type=&quot;html&quot; title=&quot;Panel 3&quot; description=&quot;Panel 3&quot;/&gt;<br>
+					&lt;/fields&gt;</code>
+				</article>
+				<p>Remember, if a field name defined in your XML does not match with HTML below, you will not see your content for that particular field.</p>
+				<p>5. Click Next.</p>
+				<p class="onlineParagraph">6. In the Body window, copy and paste the following:</p>
+				<p class="printParagraph">6. Please refer to https://www.swqr.org.uk/web-team/boilerplate/index.html#home.</p><button class="copy" onclick="copyToClipboard('#codeHomeHTML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeHomeHTML">&lt;!DOCTYPE html&gt;<br>
+					&lt;html lang=&quot;en&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_html_head&quot;)<br>
+					&lt;body id=&quot;<mark>DGDT</mark>&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_header&quot;)<br>
+					&lt;main id=&quot;container&quot;&gt;<br>
+					&lt;h1 class=&quot;visuallyhidden&quot;&gt;<mark>Home page</mark>&lt;/h1&gt;<br>
+					&lt;img id=&quot;hero&quot; alt=&quot;$!resource.getParagraph('heroImageAlt').getText()&quot; width=&quot;1140&quot; height=&quot;300&quot; src=&quot;#optionalImage('heroImage')&quot;&gt;<br>
+					$!resource.getParagraph(&quot;Description&quot;).getText()<br>
+					&lt;section id=&quot;grid&quot;&gt;<br>
+					#set($panel0=$!resource.getParagraph(&quot;panel0&quot;).getText())<br>
+					#if($panel0 &amp;&amp; !$panel0.isEmpty())<br>
+					&lt;section id=&quot;panel0&quot;&gt;<br>
+					#if($resource.getParagraph(&quot;panel0Image&quot;) &amp;&amp; $resource.getParagraph(&quot;panel0Image&quot;).getText().length() &gt; 0)<br>
+					&lt;img loading=&quot;lazy&quot; alt=&quot;$!resource.getParagraph('panel0ImageAlt').getText()&quot; src=&quot;#optionalImage('panel0Image')&quot; /&gt;<br>
+					#end<br>
+					&lt;div&gt;$!resource.getParagraph(&quot;panel0&quot;).getText()&lt;/div&gt;<br>
+					&lt;/section&gt;<br>
+					#else<br>
+					&lt;section id=&quot;news&quot;&gt;<br>
+					&lt;div&gt;<br>
+					&lt;h2&gt;News&lt;/h2&gt;<br>
+					#set($criteria = $apiTypes.createResourceCriteria())<br>
+					#set($folderResource=$resources.resourceForPathSecure(&quot;/<mark>DGDT</mark>/News&quot;))<br>
+					#set($folderResourceId=$folderResource.getId())<br>
+					$criteria.setParent($folderResourceId)<br>
+					$criteria.setPublished(true) ## Only published resources<br>
+					$criteria.setType($enums.of(&quot;ccc.api.types.ResourceType&quot;,&quot;PAGE&quot;)) ## Only pages<br>
+					$criteria.setSortField(&quot;dateCreated&quot;) ## Order by creation date, most recent first<br>
+					$criteria.setSortOrder($enums.of(&quot;ccc.api.types.SortOrder&quot;, &quot;DESC&quot;))<br>
+					<br>
+					#set($results = $resources.list($criteria,1,3).getElements())<br>
+					&lt;ul&gt;<br>
+					#foreach($result in $results)<br>
+					#if (!$result.getId().equals($folderResource.getIndexPage()))<br>
+					#set($resultPage=$pages.retrieve($result.getId()))<br>
+					&lt;li class=&quot;newsItem&quot;&gt;<br>
+					&lt;a href=&quot;$result.getAbsolutePath()&quot;&gt;$result.getTitle()&lt;/a&gt;<br>
+					&lt;/li&gt;<br>
+					#end<br>
+					#end<br>
+					&lt;/ul&gt;<br>
+					&lt;p&gt;&lt;a href=&quot;/<mark>DGDT</mark>/News&quot;&gt;View all news&lt;/a&gt;&lt;/p&gt;<br>
+					&lt;/div&gt;<br>
+					&lt;/section&gt;<br>
+					#end<br>
+					&lt;section id=&quot;panel1&quot;&gt;<br>
+					#if($resource.getParagraph(&quot;panel1Image&quot;) &amp;&amp; $resource.getParagraph(&quot;panel1Image&quot;).getText().length() &gt; 0)<br>
+					&lt;img loading=&quot;lazy&quot; width=&quot;274&quot; height=&quot;140&quot; alt=&quot;$!resource.getParagraph('panel1ImageAlt').getText()&quot; src=&quot;#optionalImage('panel1Image')&quot; /&gt;<br>
+					#end<br>
+					&lt;div&gt;$!resource.getParagraph(&quot;panel1&quot;).getText()&lt;/div&gt;<br>
+					&lt;/section&gt;<br>
+					&lt;section id=&quot;panel2&quot;&gt;<br>
+					#if($resource.getParagraph(&quot;panel2Image&quot;) &amp;&amp; $resource.getParagraph(&quot;panel2Image&quot;).getText().length() &gt; 0)<br>
+					&lt;img loading=&quot;lazy&quot; width=&quot;274&quot; height=&quot;140&quot; alt=&quot;$!resource.getParagraph('panel2ImageAlt').getText()&quot; src=&quot;#optionalImage('panel2Image')&quot; /&gt;<br>
+					#end<br>
+					&lt;div&gt;$!resource.getParagraph(&quot;panel2&quot;).getText()&lt;/div&gt;<br>
+					&lt;/section&gt;<br>
+					&lt;section id=&quot;panel3&quot;&gt;<br>
+					#if($resource.getParagraph(&quot;panel3Image&quot;) &amp;&amp; $resource.getParagraph(&quot;panel3Image&quot;).getText().length() &gt; 0)<br>
+					&lt;img loading=&quot;lazy&quot; width=&quot;274&quot; height=&quot;140&quot; alt=&quot;$!resource.getParagraph('panel3ImageAlt').getText()&quot; src=&quot;#optionalImage('panel3Image')&quot; /&gt;<br>
+					#end<br>
+					&lt;div&gt;$!resource.getParagraph(&quot;panel3&quot;).getText()&lt;/div&gt;<br>
+					&lt;/section&gt;<br>
+					&lt;/section&gt;<br>
+					&lt;/main&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_footer&quot;)<br>
+					&lt;/body&gt;<br>
+					&lt;/html&gt;</code>
+				</article>
+				<p>7. Change the parts in <mark>yellow</mark> to point to the includes files you created.</p>
+				<p>8. <strong>Save</strong> the template and <strong>Publish</strong> it.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="search-results">
+				<h2>9. Create a search results page template</h2>
+				<p>1. Navigate to <strong>assets &gt; templates</strong>.</p>
+				<p>2. In the folder you created for the general page template, create another template for the search results page and insert the following:</p>
+				<ul>
+					<li>Name: e.g. <mark>DGDT</mark>-search-results</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: html</li>
+				</ul>
+				<p>3. Click Next.</p>
+				<p>4. In the Definition XML window, replace &lt;fields&gt;&lt;/fields&gt; with:</p><button class="copy" onclick="copyToClipboard('#codeSearchXML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeSearchXML">&lt;fields&gt;&lt;/fields&gt;</code>
+				</article>
+				<p>5. Click Next.</p>
+				<p class="onlineParagraph">6. In the Body window, copy and paste the following:</p>
+				<p class="printParagraph">6. Please refer to https://www.swqr.org.uk/web-team/boilerplate/index.html#search.</p><button class="copy" onclick="copyToClipboard('#codeSearchHTML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeSearchHTML">#set($uniqueId = $resources.resourceForPathSecure(&quot;/<mark>DGDT</mark>/site-info&quot;).getId())<br>
+					#set($related = $pages.retrieve($uniqueId).getParagraph(&quot;related&quot;).getText())<br>
+					&lt;!DOCTYPE html&gt;<br>
+					&lt;html lang=&quot;en&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_html_head&quot;)<br>
+					&lt;body id=&quot;<mark>DGDT</mark>&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_header&quot;)<br>
+					&lt;main id=&quot;container&quot;&gt;<br>
+					&lt;section&gt;<br>
+					&lt;h1&gt;Search Results&lt;/h1&gt;<br>
+					#set($page=0)<br>
+					#set($p=$request.getParameter(&quot;p&quot;))<br>
+					#if($p &amp;&amp; !$p.isEmpty())<br>
+					#set($page=$page.parseInt($p))<br>
+					#end<br>
+					#set($q=$request.getParameter(&quot;q&quot;))<br>
+					#set($searchPath = &quot;path:/content/<mark>DGDT</mark>*&quot;)<br>
+					#set($searchTermWithPath = $q +&quot; AND &quot;+ $searchPath)<br>
+					#set($noOfPages=0)<br>
+					#set($sortField=&quot;name&quot;)<br>
+					#set($sortOrder=$enums.of('ccc.api.types.SortOrder', 'ASC'))<br>
+					#set($result=$services.getSearch().find($searchTermWithPath, $sortField, $sortOrder, 20, $page))<br>
+					#set($one=1)<br>
+					#set($noOfResultsToDisplayPerPage = $result.noOfResultsPerPage())<br>
+					#set($currentPageNo = ($result.getPageNo()))<br>
+					#set($displayedPageNo = ($result.getPageNo()+1))<br>
+					#set($firstResultOnPage = ($currentPageNo*$noOfResultsToDisplayPerPage)+1)<br>
+					#set($lastResultOnPage = ($displayedPageNo*$noOfResultsToDisplayPerPage))<br>
+					#set($lastResultOnLastPage = ($result.totalResults()))<br>
+					#set($noOfResultsToDisplayPerPageMinus1 =($result.noOfResultsPerPage()-$one))<br>
+					#set($noOfPages = ($result.totalResults()+$noOfResultsToDisplayPerPageMinus1)/$noOfResultsToDisplayPerPage)<br>
+					&lt;p class=&quot;resultsheader&quot;&gt;<br>
+					#if ($displayedPageNo==$noOfPages)<br>
+					$firstResultOnPage - $lastResultOnLastPage<br>
+					#else<br>
+					$firstResultOnPage - $lastResultOnPage of $!result.totalResults().<br>
+					#end<br>
+					Page $displayedPageNo of $noOfPages<br>
+					&lt;/p&gt;<br>
+					&lt;h2&gt;Search results for &lt;em&gt;$q&lt;/em&gt;&lt;/h2&gt;<br>
+					#foreach($hit in $result.hits())<br>
+					&lt;div class=&quot;results&quot;&gt;<br>
+					#set ($hitPage = &quot;&quot;)<br>
+					#if ($resources.exists($hit))<br>
+					#set($rSibling=$resources.retrieve($hit))<br>
+					#if ($rSibling.getTitle() != &quot;Site info&quot; &amp;&amp; $rSibling.getTitle() != &quot;<mark class="teal">GoogleSitemap</mark>&quot;)<br>
+					#if($rSibling.getType() == &quot;PAGE&quot;)<br>
+					#set ($hitPage = $pages.retrieve($hit))<br>
+					#end<br>
+					#set($type = &quot;PAGE&quot;)<br>
+					&lt;h2&gt;<br>
+					#if ($rSibling.getType() == &quot;PAGE&quot;)<br>
+					#set($parent = $resources.retrieve($rSibling.getParent()))<br>
+					&lt;span class=&quot;searchType&quot;&gt;$type&lt;/span&gt; &lt;a href=&quot;$rSibling.getAbsolutePath()&quot;&gt;$parent.getTitle() &amp;gt; $rSibling.getTitle()&lt;/a&gt;<br>
+					#else<br>
+					&lt;span class=&quot;searchType&quot;&gt;FILE&lt;/span&gt; &lt;a class=&quot;file&quot; href=&quot;$rSibling.getAbsolutePath()&quot;&gt;$rSibling.getTitle()&lt;/a&gt;<br>
+					#end<br>
+					&lt;/h2&gt;<br>
+					#if($hitPage &amp;&amp; $hitPage != &quot;&quot;)<br>
+					#set($snippet = &quot;&quot;)<br>
+					#set($snippet = $hitPage.getParagraph(&quot;content&quot;).getText())<br>
+					#if($snippet!=&quot;&quot;)<br>
+					#set($snippet = $snippet.replaceAll(&quot;&lt;[^&gt;]*&gt;&quot;,&quot;&quot;))<br>
+					#set($ls = $snippet.toLowerCase())<br>
+					#set ($queryText = $html.escape($!q).toLowerCase())<br>
+					#if($ls.indexOf($queryText) &gt; -1)<br>
+					#set($begin = 0)<br>
+					#if($ls.indexOf($queryText) &gt; 90)<br>
+					#set($begin = $ls.indexOf($queryText) - 90)<br>
+					#end<br>
+					#set($end = $ls.length())<br>
+					#if($end &gt; ($ls.indexOf($queryText) + 90))<br>
+					#set($end = $ls.indexOf($queryText) +90)<br>
+					#end<br>
+					&lt;p&gt;&amp;hellip;$snippet.substring($begin, $end)&amp;hellip;&lt;/p&gt;<br>
+					#elseif($rSibling.getType() == &quot;PAGE&quot;)<br>
+					#set($end = $snippet.length())<br>
+					#if($end &gt; 100)<br>
+					#set($end = 99)<br>
+					#end<br>
+					&lt;p&gt;&amp;hellip;$snippet.substring(0, $end)&amp;hellip;&lt;/p&gt;<br>
+					#end<br>
+					#end<br>
+					#end<br>
+					#end<br>
+					#else<br>
+					#set ($deadResources = $deadResources + 1)<br>
+					#end<br>
+					&lt;/div&gt;<br>
+					#end<br>
+					&lt;p class=&quot;resultsheader&quot;&gt;Page $displayedPageNo of $noOfPages&lt;/p&gt;<br>
+					#if ( $result.totalResults() &gt; 0)<br>
+					&lt;p&gt;<br>
+					#if ($currentPageNo!=0)<br>
+					&lt;a href=&quot;$resource.getName()?p=0&amp;q=$q&quot;&gt;&amp;lt;&amp;lt; first&lt;/a&gt;<br>
+					#set ($previousPage = ($currentPageNo - 1))<br>
+					&lt;a href=&quot;$resource.getName()?p=$previousPage&amp;q=$q&quot;&gt;&amp;lt; previous&lt;/a&gt;<br>
+					#end<br>
+					#if ($displayedPageNo &lt; $noOfPages)<br>
+					#set ($nextPage = ($currentPageNo+1))<br>
+					&lt;a href=&quot;$resource.getName()?p=$nextPage&amp;q=$q&quot;&gt;next &amp;gt;&lt;/a&gt;<br>
+					#set ($lastPage = ($noOfPages - 1))<br>
+					&lt;a href=&quot;$resource.getName()?p=$lastPage&amp;q=$q&quot;&gt;last &amp;gt;&amp;gt;&lt;/a&gt;&lt;/p&gt;<br>
+					#end<br>
+					#end<br>
+					&lt;/section&gt;<br>
+					&lt;aside&gt;$related&lt;/aside&gt;<br>
+					&lt;/main&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_footer&quot;)<br>
+					&lt;/body&gt;<br>
+					&lt;/html&gt;</code>
+				</article>
+				<p>7. Change the parts in <mark>yellow</mark> to point to the includes files you created.</p>
+				<p>8. Change the part in <mark class="teal">teal</mark> if the title of your sitemap differs.</p>
+				<p>8. <strong>Save</strong> the template and <strong>Publish</strong> it.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="site-info">
+				<h2>10. Create a site info page template</h2>
+				<p>1. Navigate to <strong>assets &gt; templates</strong>.</p>
+				<p>2. In the folder where you created the general page template, create a template for the site info page and insert the following:</p>
+				<ul>
+					<li>Name: e.g. <mark>DGDT</mark>-site-info</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: html</li>
+				</ul>
+				<p>3. Click Next.</p>
+				<p>4. In the Definition XML window, replace &lt;fields&gt;&lt;/fields&gt; with:</p><button class="copy" onclick="copyToClipboard('#codeSiteInfoXML2')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeSiteInfoXML2">&lt;fields&gt;<br>
+					&lt;field name=&quot;related&quot; type=&quot;html&quot; title=&quot;Related&quot; description=&quot;Related&quot;/&gt;<br>
+					&lt;/fields&gt;</code>
+				</article>
+				<p>5. Click Next.</p>
+				<p>6. In the Body window, copy and paste the following:</p><button class="copy" onclick="copyToClipboard('#codeSiteInfoHTML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeSiteInfoHTML">&lt;!DOCTYPE html&gt;<br>
+					&lt;html lang=&quot;en&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_html_head&quot;)<br>
+					&lt;body id=&quot;<mark>DGDT</mark>&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_header&quot;)<br>
+					&lt;section id=&quot;container&quot;&gt;<br>
+					$!resource.getParagraph(&quot;related&quot;).getText()<br>
+					$!resource.getId()<br>
+					&lt;/section&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_footer&quot;)<br>
+					&lt;/body&gt;<br>
+					&lt;/html&gt;</code>
+				</article>
+				<p>7. Change the parts in <mark>yellow</mark> to point to the includes files you created.</p>
+				<p>8. <strong>Save</strong> the template and <strong>Publish</strong> it.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="contact">
+				<h2>11. Create a contact page template</h2>
+				<p>1. Navigate to <strong>assets &gt; templates</strong>.</p>
+				<p>2. In the folder where you created the general page template, create a template for the contact page and insert the following:</p>
+				<ul>
+					<li>Name: e.g. <mark>DGDT</mark>-contact</li>
+					<li>Mime Primary Type: text</li>
+					<li>Mime Sub-type: html</li>
+				</ul>
+				<p>3. Click Next.</p>
+				<p>4. In the Definition XML window, replace &lt;fields&gt;&lt;/fields&gt; with:</p><button class="copy" onclick="copyToClipboard('#codeContactXML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeContactXML">&lt;fields&gt;<br>
+					&lt;field name=&quot;header&quot; type=&quot;text_field&quot; title=&quot;Header&quot; description=&quot;Header&quot;/&gt;<br>
+					&lt;field name=&quot;content&quot; type=&quot;html&quot; title=&quot;Content&quot; description=&quot;The content of the main section.&quot; /&gt;<br>
+					&lt;/fields&gt;</code>
+				</article>
+				<p>5. Click Next.</p>
+				<p>6. In the Body window, copy and paste the following:</p><button class="copy" onclick="copyToClipboard('#codeContactHTML')">Copy</button>
+				<article class="codeFrame">
+					<code id="codeContactHTML">#set($uniqueId = $resources.resourceForPathSecure(&quot;/<mark>DGDT</mark>/site-info&quot;).getId())<br>
+					#set($related = $pages.retrieve($uniqueId).getParagraph(&quot;related&quot;).getText())<br>
+					&lt;!DOCTYPE html&gt;<br>
+					&lt;html lang=&quot;en&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_html_head&quot;)<br>
+					<br>
+					&lt;body id=&quot;<mark>DGDT</mark>&quot;&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_header&quot;)<br>
+					<br>
+					&lt;main id=&quot;container&quot;&gt;<br>
+					&lt;section&gt;<br>
+					&lt;article id=&quot;main_short&quot;&gt;<br>
+					&lt;div&gt;<br>
+					&lt;h1&gt;$resource.getParagraph(&quot;header&quot;).getText()&lt;/h1&gt;<br>
+					$resource.getParagraph(&quot;content&quot;).getText()<br>
+					<br>
+					&lt;!-- Form success --&gt;<br>
+					#set ($success = $request.getParameter('success'))<br>
+					#if ($success)<br>
+					&lt;p class=&quot;success&quot;&gt;Thank you for contacting us.&lt;/p&gt;<br>
+					#end<br>
+					<br>
+					&lt;!-- Form errors --&gt;<br>
+					#set( $errors = $request.getAttribute('Contact.errors') )<br>
+					<br>
+					#if( $errors )<br>
+					&lt;div class=&quot;error-summary&quot;&gt;<br>
+					&lt;p class=&quot;error&quot;&gt;&lt;strong&gt;Please correct the following errors:&lt;/strong&gt;&lt;/p&gt;<br>
+					&lt;ul&gt;<br>
+					#foreach( $error in $errors )<br>
+					&lt;li class=&quot;error&quot;&gt;$error&lt;/li&gt;<br>
+					#end<br>
+					&lt;/ul&gt;<br>
+					&lt;/div&gt;<br>
+					#set ($name = $!request.getAttribute('name'))<br>
+					#set ($email = $!request.getAttribute('email'))<br>
+					#set ($enquiry = $!request.getAttribute('enquiry'))<br>
+					#set ($comments = $!request.getAttribute('comments'))<br>
+					#end<br>
+					<br>
+					&lt;form id=&quot;contactForm&quot; method=&quot;post&quot; name=&quot;<mark>Dangerous Goods Driver Training</mark>&quot; action=&quot;/assets/scripts/<mark>DGDT</mark>/contact.js&quot;&gt;<br>
+					&lt;p&gt;&lt;span class=&quot;required&quot;&gt;*&lt;/span&gt; &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;&lt;/p&gt;<br>
+					&lt;p&gt;&lt;input name=&quot;name&quot; autocomplete=&quot;off&quot; id=&quot;name&quot; type=&quot;text&quot; value=&quot;$!name&quot; required/&gt;&lt;/p&gt;<br>
+					&lt;p&gt;&lt;span class=&quot;required&quot;&gt;*&lt;/span&gt; &lt;label for=&quot;email&quot;&gt;E-mail address:&lt;/label&gt;&lt;/p&gt;<br>
+					&lt;p&gt;&lt;input name=&quot;email&quot; autocomplete=&quot;off&quot; id=&quot;email&quot; type=&quot;email&quot; value=&quot;$!email&quot; required/&gt;&lt;/p&gt;<br>
+					&lt;p&gt;&lt;span class=&quot;required&quot;&gt;*&lt;/span&gt; &lt;label for=&quot;enquiry&quot;&gt;Please select your reason for enquiry:&lt;/label&gt;&lt;/p&gt;<br>
+					&lt;p&gt;&lt;select name=&quot;enquiry&quot; id=&quot;enquiry&quot; title=&quot;Enquiry&quot; required=&quot;&quot;&gt;<br>
+					&lt;option value=&quot;&quot;&gt;--- Please select ---&lt;/option&gt;<br>
+					&lt;option value=&quot;<mark>Option-1</mark>&quot;&gt;<mark>Option 1</mark>&lt;/option&gt;<br>
+					&lt;option value=&quot;<mark>Option-2</mark>&quot;&gt;<mark>Option 2</mark>&lt;/option&gt;<br>
+					&lt;option value=&quot;<mark>Option-3</mark>&quot;&gt;<mark>Option 3</mark>&lt;/option&gt;<br>
+					&lt;/select&gt;&lt;/p&gt;<br>
+					&lt;p id=&quot;enquiryInfo&quot;&gt;&lt;/p&gt;<br>
+					&lt;p&gt;&lt;span class=&quot;required&quot;&gt;*&lt;/span&gt; &lt;label for=&quot;comments&quot;&gt;Message:&lt;/label&gt;&lt;/p&gt;<br>
+					&lt;p&gt;&lt;textarea name=&quot;comments&quot; cols=&quot;80&quot; rows=&quot;10&quot; id=&quot;comments&quot; style=&quot;margin-left: 0;&quot; required&gt;&lt;/textarea&gt;&lt;/p&gt;<br>
+					&lt;p&gt;For more details about how SQA uses your personal information, please read our &lt;a href= &quot;https://www.sqa.org.uk/sqa/45397.html&quot;&gt;Privacy Statement&lt;/a&gt;.&lt;/p&gt;<br>
+					&lt;span class=&quot;error&quot; id=&quot;recaptchaError&quot; style=&quot;display:none; margin-top: 12px;&quot;&gt;&amp;nbsp;&lt;/span&gt;<br>
+					&lt;p&gt;&lt;input type=&quot;hidden&quot; id=&quot;g-recaptcha-response&quot; name=&quot;g-recaptcha-response&quot;&gt;&lt;/p&gt;<br>
+					&lt;p&gt;&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;validate_captcha&quot;&gt;&lt;/p&gt;<br>
+					&lt;p&gt;&lt;input type=&quot;button&quot; id=&quot;submit&quot; value=&quot;Submit&quot; onClick=&quot;validateAndSubmitForm()&quot;&gt;&lt;/p&gt; &lt;/p&gt;<br>
+					&lt;/form&gt;<br>
+					&lt;/div&gt;<br>
+					&lt;/article&gt;<br>
+					&lt;/section&gt;<br>
+					&lt;aside&gt;<br>
+					$related<br>
+					&lt;/aside&gt;<br>
+					&lt;/main&gt;<br>
+					#parse (&quot;/assets/includes/<mark>DGDT</mark>/inc_footer&quot;)<br>
+					<br>
+					&lt;script&gt;<br>
+					var selectElement = document.getElementById(&quot;enquiry&quot;)<br>
+					var pElement = document.getElementById(&quot;enquiryInfo&quot;)<br>
+					selectElement.addEventListener('change', function() {<br>
+					var index = selectElement.selectedIndex;<br>
+					if (index == 0) {<br>
+					pElement.innerHTML = &quot;&quot;;<br>
+					}<br>
+					else if (index == 1) {<br>
+					pElement.innerHTML = &quot;<mark>Option 1</mark>&quot;;<br>
+					}<br>
+					else if (index == 2) {<br>
+					pElement.innerHTML = &quot;<mark>Option 2</mark>&quot;;<br>
+					}<br>
+					else if (index == 3) {<br>
+					pElement.innerHTML = &quot;<mark>Option 3</mark>&quot;;<br>
+					}<br>
+					})<br>
+					&lt;/script&gt;<br>
+					<br>
+					&lt;!-- Google reCAPTCHA --&gt;<br>
+					&lt;script src=&quot;https://www.google.com/recaptcha/api.js?render=<mark class="teal">0000000000000000000000000000000000000000</mark>&quot;&gt;&lt;/script&gt;<br>
+					&lt;script&gt;<br>
+					function validateAndSubmitForm() {<br>
+					grecaptcha.ready(function() {<br>
+					grecaptcha.execute(<mark class="teal">'0000000000000000000000000000000000000000'</mark>, {action: 'validate_captcha'}).then(function(token) {<br>
+					document.getElementById(&quot;g-recaptcha-response&quot;).value = token;<br>
+					HTMLFormElement.prototype.submit.call(document.getElementById(&quot;<mark>FORM_ID</mark>&quot;));<br>
+					});<br>
+					});<br>
+					}<br>
+					&lt;/script&gt;<br>
+					&lt;!-- End Google reCAPTCHA --&gt;<br>
+					<br>
+					&lt;/body&gt;<br>
+					&lt;/html&gt;</code>
+				</article>
+				<p>7. Change the parts in <mark>yellow</mark>. Refer to <a href="https://www.google.com/recaptcha/admin">Google reCAPTCHA</a> and update the section highlighted in <mark class="teal">teal</mark> with your <strong>site key</strong>.</p>
+				<p>8. <strong>Save</strong> the template and <strong>Publish</strong> it.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="site-info-page">
+				<h2>12. Create a site info page using a template</h2>
+				<p>1. Select <strong>Create folder</strong> in the content directory with the name of your site (e.g. DGDT) and <strong>Publish</strong> it.</p>
+				<p>2. Select <img alt="Cog" id="cog" src="https://liamobyrne.com/img/cog.png"> and select <strong>Choose template</strong> and select the general template you created.</p><img alt="Select default template" src="https://liamobyrne.com/img/DefaultTemplate.png">
+				<p>This means that when you create a page inside your new folder, it will automatically adopt the general template. You only need to choose a template for a non-normal page (e.g. home, search).</p>
+				<p>3. In the folder you created with the name of your site, select <strong>Create page</strong>.</p>
+				<p>Notice the <strong>Use default template</strong> is checked? That means that the general template will be adopted. If you decide you don't want to adopt the general template for this particular page, you can select another template.</p><img alt="Select a template" src="https://liamobyrne.com/img/CreatePage.png">
+				<p>See the 6 templates we have created?</p>
+				<p>4. Uncheck the <strong>Use default template</strong> box and select <strong><mark>DGDT</mark>-site-info</strong>.</p>
+				<p>This will allow us to feature related information across multiple pages on our site.</p>
+				<p>5. Populate the <strong>Related</strong> box.</p><img alt="Populate the Related box" id="populate" src="https://liamobyrne.com/img/site-info-page.png">
+				<p>6. <strong>Save</strong> the page and <strong>Publish</strong> it.</p>
+				<p>You should have something like this:</p><img alt="Site info page created" src="https://liamobyrne.com/img/site-info-publish.png"><br>
+				<br>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="general-page">
+				<h2>13. Create a general page using a template</h2>
+				<p>1. In the folder you created with the name of your site, select <strong>Create page</strong>.</p>
+				<p>2. Ensure <strong>Use default template</strong> is checked.</p><img alt="Default template" src="https://liamobyrne.com/img/Default-Template.png">
+				<p>3. Populate the <strong>Content</strong> box.</p><img alt="Populate the Content box" src="https://liamobyrne.com/img/Populate-Content.png">
+				<p>4. <strong>Save</strong> the page and <strong>Publish</strong> it.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="news-article-page">
+				<h2>14. Create a news article page using a template</h2>
+				<p>1. In the folder you created with the name of your site, select <strong>Create folder</strong> called <strong>News</strong> and <strong>Publish</strong> it.</p><img alt="Create folder called News and Publish" src="https://liamobyrne.com/img/News-Folder.png">
+				<p><strong>Folders</strong> within a site folder are used to create sub menus on the main navigation. Any pages that sit inside the folder will appear in the sub menu if the <strong>Add to menu</strong> option is set to true.</p>
+				<p>2. Inside the <strong>News</strong> folder, select <strong>Create page</strong>.</p>
+				<p>3. Uncheck the <strong>Use default template</strong> box and select <strong><mark>DGDT</mark>-news</strong>.</p>
+				<p>4. Populate the <strong>Summary</strong> and <strong>Content</strong> box.</p><img alt="Populate the Summary and Content box" src="https://liamobyrne.com/img/Populate-Content-News-Article.png">
+				<p>5. <strong>Save</strong> the page and <strong>Publish</strong> it.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="news-home-page">
+				<h2>15. Create a news home page using a template</h2>
+				<p>1. Repeat the instructions in step <strong>14. Create a news article page using a template</strong>.</p>
+				<p>2. Uncheck the <strong>Use default template</strong> box and select <strong><mark>DGDT</mark>-news-home</strong>.</p>
+				<p>3. Populate the <strong>Name</strong> box with <strong>News</strong>.</p>
+				<p>4. <strong>Save</strong> the page and <strong>Publish</strong> it.</p>
+				<p>5. Set the News folder index page as the news home page.</p><img alt="Set the News folder index page" src="https://liamobyrne.com/img/News-Folder-Index.png">
+				<p>6. <strong>Save</strong>.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="search-results-page">
+				<h2>16. Create a search results page using a template</h2>
+				<p>1. In the folder you created with the name of your site, select <strong>Create page</strong>.</p>
+				<p>2. Uncheck the <strong>Use default template</strong> box and select <strong><mark>DGDT</mark>-search-results</strong>.</p>
+				<p>3. Populate the <strong>Name</strong> box with <strong>Search-results</strong>.</p>
+				<p>4. <strong>Save</strong> the page and <strong>Publish</strong> it.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="home-page">
+				<h2>17. Create a home page using a template</h2>
+				<p>1. In the folder you created with the name of your site, select <strong>Create page</strong>.</p>
+				<p>2. Uncheck the <strong>Use default template</strong> box and select <strong><mark>DGDT</mark>-home</strong>.</p>
+				<p>3. Populate the <strong>Content</strong> box.</p>
+				<p>4. <strong>Save</strong> the page and <strong>Publish</strong> it.</p>
+				<p>5. On the Home page, select <img alt="Cog" id="cog" src="https://liamobyrne.com/img/cog.png"> and select <strong>Add to menu</strong>.</p>
+				<p><strong>Add to menu</strong> creates a link to that particular page on the main navigation.</p><img alt="Preview of page" src="https://liamobyrne.com/img/CreatePagePreview.png">
+				<p>If you require a submenu, create a folder within the folder you just created and name it with the name of the link (e.g. Schools). Repeat steps 3 - 5 and don't forget to publish the folder.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="form">
+				<h2>18. Create a contact page using a template</h2>
+				<p>1. In the folder you created with the name of your site, select <strong>Create page</strong>.</p>
+				<p>2. Uncheck the <strong>Use default template</strong> box and select <strong><mark>DGDT</mark>-contact</strong>.</p>
+				<p>3. Populate the <strong>Content</strong> box.</p>
+				<p>4. <strong>Save</strong> the page and <strong>Publish</strong> it.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="thank-you">
+				<h2>19. Create a thank you page</h2>
+				<p>1. In the folder you created with the name of your site, select <strong>Create page</strong>.</p>
+				<p>2. Ensure Use <strong>default template</strong> is checked.</p><img alt="Default template" src="https://liamobyrne.com/img/Default-Template.png">
+				<p>3. Populate the <strong>Content</strong> box. Name the page <strong>Thank-you</strong>.</p><img alt="Thank you content page" src="https://liamobyrne.com/img/thank-you.png">
+				<p>4. <strong>Save</strong> the page and <strong>Publish</strong> it.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="site-map">
+				<h2>20. Create a site map</h2>
+				<p>1. Request CIVIC to re-index the site overnight.</p>
+				<p>2. Request site map from CIVIC.</p>
+				<p>3. Submit site map to <a href="https://search.google.com/search-console/">Google Search Console</a>.</p>
+				<p>4. Build HTML site map using <a href="https://app.powermapper.com/Sitemaps">SortSite</a>.</p>
+				<p>5. Add HTML site map to footer include.</p>
+			</article>
+			<hr>
+			<div class="pagebreak"></div>
+			<article id="gtm">
+				<h2>21. Implement Google Tag Manager</h2>
+				<p>1. Navigate to <a href="https://tagmanager.google.com/">Google Tag Manager</a> and sign in.</p>
+				<p><img alt="Google Tag Manager" src="https://liamobyrne.com/img/gtm.png"></p>
+				<p>2. Select <img alt="Options" id="options" src="https://liamobyrne.com/img/options.png"> and select <strong>Create Container</strong>.</p>
+				<p><img alt="Create Container" src="https://liamobyrne.com/img/gtm5.png"></p>
+				<p>3. Name the container the name of your site (e.g. DGDT).</p>
+				<p>4. Select <strong>Web</strong> as your target platform.</p><img alt="Container Settings" src="https://liamobyrne.com/img/gtm2.png">
+				<p>5. Select <strong>Create</strong>.</p><img alt="GTM code" src="https://liamobyrne.com/img/gtm3.png">
+				<p>6. Copy the <strong>&lt;script&gt;</strong> and paste it in your <a href="#js">cookie-control-v9.js</a>.</p>
+				<p>7. Copy the <strong>&lt;noscript&gt;</strong> and paste it at the top of your <a href="#includes">inc_header</a>, ensuring the <mark class="teal">GTM-0000000</mark> reflects your <strong>Container ID</strong>.</p>
+			</article>
+			<hr>
+			<footer>
+				&copy; 2020 Scottish Qualifications Authority
+			</footer><button id="top" onclick="topFunction()" style="display: block;" title="Go to top">↑</button> 
+			<script>
+			                        window.onscroll = function() {
+			                            scrollFunction()
+			                        };
+
+			                        function scrollFunction() {
+			                            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			                                document.getElementById("top").style.display = "block";
+			                            } else {
+			                                document.getElementById("top").style.display = "none";
+			                            }
+			                        }
+
+			                        function topFunction() {
+			                            document.body.scrollTop = 0;
+			                            document.documentElement.scrollTop = 0;
+			                        }
+			</script> 
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+			</script> 
+			<script>
+			                        function copyToClipboard(element) {
+			                            var $temp = $("<textarea>");
+			                            $("body").append($temp);
+			                            $temp.val($(element).html().replace(/&amp;/gi, "&").replace(/<br>/gi, "").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/<mark>/g, "").replace(/<[/]mark>/g, "").replace(/<mark class="teal">/g, "").replace(/<mark class="pink">/g, "").replace(/©/, "&copy;")).select();
+			                            document.execCommand("copy");
+			                            $temp.remove();
+			                        }
+			</script>
+		</div>
+	</section>
+</body>
+</html>
